@@ -1,0 +1,11 @@
+{
+  "name": "iae-astro",
+  "version": "3.0.0",
+  "description": "Integrated Astrological Engine — Automated 30-Day Dashboard",
+  "scripts": {
+    "build": "node generate.js"
+  },
+  "dependencies": {
+    "astronomy-engine": "^2.1.19"
+  }
+}

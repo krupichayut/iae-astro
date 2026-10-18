@@ -1,0 +1,3422 @@
+[
+  {
+    "dayIndex": 1,
+    "date": "2026-10-18",
+    "dayOfWeek": "อาทิตย์",
+    "bazi": "Yi (ไม้-) Chou (ฉลู/ดิน)",
+    "taksa": {
+      "sri": "แดง",
+      "dech": "ส้ม/ทอง",
+      "kalakini": "ขาว"
+    },
+    "netScore": 59,
+    "transits": {
+      "Sun": {
+        "deg": 205.20141134165812,
+        "signStr": "ตุลย์ 25°12'"
+      },
+      "Moon": {
+        "deg": 294.09307503966596,
+        "signStr": "มังกร 24°05'"
+      },
+      "Mercury": {
+        "deg": 229.1012525505661,
+        "signStr": "พิจิก 19°06'"
+      },
+      "Venus": {
+        "deg": 214.03154934595764,
+        "signStr": "พิจิก 4°01'"
+      },
+      "Mars": {
+        "deg": 131.5914062507609,
+        "signStr": "สิงห์ 11°35'"
+      },
+      "Jupiter": {
+        "deg": 142.4948734409625,
+        "signStr": "สิงห์ 22°29'"
+      },
+      "Saturn": {
+        "deg": 10.21302976401001,
+        "signStr": "เมษ 10°12'"
+      },
+      "Uranus": {
+        "deg": 65.11842218046624,
+        "signStr": "เมถุน 5°07'"
+      },
+      "Neptune": {
+        "deg": 2.397857456567993,
+        "signStr": "เมษ 2°23'"
+      },
+      "Pluto": {
+        "deg": 303.0696689740483,
+        "signStr": "กุมภ์ 3°04'"
+      }
+    },
+    "aspectsCount": 24,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.2
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Fortune",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.34
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.38
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.47
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Vertex",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.58
+      }
+    ],
+    "narrative": {
+      "headline": "ดาวเสาร์ล็อกแกนการงาน & ดวงจันทร์ปะทะชั่วคราว",
+      "summary": "เสาร์ทับ MC เต็มกำลัง ภาระงานและระเบียบวินัยยังเข้มงวด พระจันทร์ฉากดาวศุกร์ทำให้มีอารมณ์ขัดแย้งเล็กๆ",
+      "career": "ต้องรับผิดชอบงานตามกฎเกณฑ์ เหนื่อยแต่เป็นการสร้างรากฐานที่มั่นคงในระยะยาว",
+      "finance": "ดวงอาทิตย์ทับจุดโชคลาภ (Fortune) มีสัญญาณบวกเรื่องโอกาสใหม่ๆ เริ่มก่อตัว",
+      "emotion": "อาจรู้สึกขัดแย้งระหว่างหน้าที่ที่ต้องทำ กับสิ่งที่ใจอยากพักผ่อน",
+      "warning": "อย่าเพิ่งเก็บคำพูดของคนอื่นมากดดันตัวเองในคืนวันอาทิตย์",
+      "action": "นอนหลับพักผ่อนโดยหันหัวนอนไปทิศใต้หรือตะวันออกตามหลักฮวงจุ้ย"
+    }
+  },
+  {
+    "dayIndex": 2,
+    "date": "2026-10-19",
+    "dayOfWeek": "จันทร์",
+    "bazi": "Bing (ไฟ+) Yin (ขาล/ไม้)",
+    "taksa": {
+      "sri": "ส้ม/ทอง",
+      "dech": "ดำ/เทา",
+      "kalakini": "ขาว"
+    },
+    "netScore": 57,
+    "transits": {
+      "Sun": {
+        "deg": 206.1944355627194,
+        "signStr": "ตุลย์ 26°11'"
+      },
+      "Moon": {
+        "deg": 306.048997869126,
+        "signStr": "กุมภ์ 6°02'"
+      },
+      "Mercury": {
+        "deg": 229.665303025062,
+        "signStr": "พิจิก 19°39'"
+      },
+      "Venus": {
+        "deg": 213.47622255556556,
+        "signStr": "พิจิก 3°28'"
+      },
+      "Mars": {
+        "deg": 132.13235842374385,
+        "signStr": "สิงห์ 12°07'"
+      },
+      "Jupiter": {
+        "deg": 142.64377550911541,
+        "signStr": "สิงห์ 22°38'"
+      },
+      "Saturn": {
+        "deg": 10.138913882702976,
+        "signStr": "เมษ 10°08'"
+      },
+      "Uranus": {
+        "deg": 65.08892963013056,
+        "signStr": "เมถุน 5°05'"
+      },
+      "Neptune": {
+        "deg": 2.372958273867384,
+        "signStr": "เมษ 2°22'"
+      },
+      "Pluto": {
+        "deg": 303.0710715466409,
+        "signStr": "กุมภ์ 3°04'"
+      }
+    },
+    "aspectsCount": 21,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Vertex",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.03
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.23
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.38
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.47
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Neptune",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.54
+      }
+    ],
+    "narrative": {
+      "headline": "ดาวศุกร์จรทับจุดชะตาลิขิต (Vertex Exact 0.07°)",
+      "summary": "มุมที่เป๊ะมากของดาวศุกร์นำพาความคิดสร้างสรรค์และมิตรภาพที่ส่งเสริมกันเข้ามา",
+      "career": "มีไอเดียใหม่ๆ ในการสอนหรือออกแบบสื่อ เป็นวันที่เหมาะกับการปรึกษาหารือเรื่องโปรเจกต์",
+      "finance": "เริ่มมองเห็นช่องทางขยายรายได้จากทักษะเฉพาะตัว (อาชีพเสริม)",
+      "emotion": "รู้สึกมีเสน่ห์ คนรอบข้างพูดคุยด้วยความสบายใจ",
+      "warning": "งานประจำยังแน่น อย่ามัวแต่คุยจนลืมส่งงานหลัก",
+      "action": "จดบันทึกไอเดียที่แวบเข้ามาในวันนี้ไว้ต่อยอด สวมเสื้อผ้าโทนส้มหรือดำ"
+    }
+  },
+  {
+    "dayIndex": 3,
+    "date": "2026-10-20",
+    "dayOfWeek": "อังคาร",
+    "bazi": "Ding (ไฟ-) Mao (เถาะ/ไม้)",
+    "taksa": {
+      "sri": "ทอง/มัสตาร์ด",
+      "dech": "ม่วงเข้ม/ดำ",
+      "kalakini": "ขาว"
+    },
+    "netScore": 73,
+    "transits": {
+      "Sun": {
+        "deg": 207.18792555941656,
+        "signStr": "ตุลย์ 27°11'"
+      },
+      "Moon": {
+        "deg": 318.1969572159466,
+        "signStr": "กุมภ์ 18°11'"
+      },
+      "Mercury": {
+        "deg": 230.1405976936068,
+        "signStr": "พิจิก 20°08'"
+      },
+      "Venus": {
+        "deg": 212.90177982334333,
+        "signStr": "พิจิก 2°54'"
+      },
+      "Mars": {
+        "deg": 132.67064573020988,
+        "signStr": "สิงห์ 12°40'"
+      },
+      "Jupiter": {
+        "deg": 142.7907154990278,
+        "signStr": "สิงห์ 22°47'"
+      },
+      "Saturn": {
+        "deg": 10.06543172727329,
+        "signStr": "เมษ 10°03'"
+      },
+      "Uranus": {
+        "deg": 65.05881810098931,
+        "signStr": "เมถุน 5°03'"
+      },
+      "Neptune": {
+        "deg": 2.348298315396312,
+        "signStr": "เมษ 2°20'"
+      },
+      "Pluto": {
+        "deg": 303.0729390221806,
+        "signStr": "กุมภ์ 3°04'"
+      }
+    },
+    "aspectsCount": 23,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.25
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Uranus",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.3
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.38
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Neptune",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.46
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.47
+      }
+    ],
+    "narrative": {
+      "headline": "ดวงอาทิตย์ฉากเนปจูน & ศุกร์ฉากยูเรนัส (ระวังความเบลอ)",
+      "summary": "มุมฉากระหว่างดาวสติปัญญาและดาวภาพลวงตา ทำให้สมองอาจมีช่วงที่หลุดโฟกัส",
+      "career": "ระวังความเข้าใจคลาดเคลื่อนในคำสั่งหรือเอกสารราชการ การสื่อสารอาจไม่ตรงจุด",
+      "finance": "ระวังความรู้สึกอยากช้อปปิ้งของสวยงามหรืออุปกรณ์เสริมแบบหุนหันพลันแล่น",
+      "emotion": "อาจมีความรู้สึกสับสนหรือไม่มั่นใจในทิศทางบางอย่างชั่วคราว",
+      "warning": "ห้ามเซ็นเอกสารสำคัญโดยไม่อ่านทานซ้ำ 2 รอบ และห้ามกดซื้อของชิ้นใหญ่",
+      "action": "โฟกัสทีละงาน ทำงานรูทีนง่ายๆ ไม่ตัดสินใจเรื่องใหญ่"
+    }
+  },
+  {
+    "dayIndex": 4,
+    "date": "2026-10-21",
+    "dayOfWeek": "พุธ",
+    "bazi": "Wu (ดิน+) Chen (มะโรง/ดิน)",
+    "taksa": {
+      "sri": "ส้มอิฐ",
+      "dech": "เทาควันบุหรี่",
+      "kalakini": "ขาว/ชมพูอ่อน"
+    },
+    "netScore": 64,
+    "transits": {
+      "Sun": {
+        "deg": 208.1818851292101,
+        "signStr": "ตุลย์ 28°10'"
+      },
+      "Moon": {
+        "deg": 330.62160188898355,
+        "signStr": "มีน 0°37'"
+      },
+      "Mercury": {
+        "deg": 230.51848821012305,
+        "signStr": "พิจิก 20°31'"
+      },
+      "Venus": {
+        "deg": 212.31187613032915,
+        "signStr": "พิจิก 2°18'"
+      },
+      "Mars": {
+        "deg": 133.2062366413245,
+        "signStr": "สิงห์ 13°12'"
+      },
+      "Jupiter": {
+        "deg": 142.93566676764274,
+        "signStr": "สิงห์ 22°56'"
+      },
+      "Saturn": {
+        "deg": 9.992622644753753,
+        "signStr": "เมษ 9°59'"
+      },
+      "Uranus": {
+        "deg": 65.02810050624257,
+        "signStr": "เมถุน 5°01'"
+      },
+      "Neptune": {
+        "deg": 2.323887429396752,
+        "signStr": "เมษ 2°19'"
+      },
+      "Pluto": {
+        "deg": 303.07527168489736,
+        "signStr": "กุมภ์ 3°04'"
+      }
+    },
+    "aspectsCount": 20,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.28
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Uranus",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.29
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Chiron",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.31
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.37
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.48
+      }
+    ],
+    "narrative": {
+      "headline": "ดาวอังคารโยคไครอน — ปลดล็อกความกล้าหาญ",
+      "summary": "พลังงานไฟของดาวอังคารช่วยผลักดันให้คุณกล้าสะสางงานที่เคยผัดวันประกันพรุ่ง",
+      "career": "เป็นวันที่พลังในการลุยงานเดี่ยวสูงมาก งานยากๆ ที่ต้องใช้สมาธิจะเสร็จสิ้นได้ในวันนี้",
+      "finance": "การเงินเริ่มหมุนเวียนคล่องตัวขึ้น ไม่มีรายจ่ายแทรกแซง",
+      "emotion": "ความมั่นใจในตัวเองกลับคืนมา เลิกกังวลกับเรื่องในอดีต",
+      "warning": "ระวังอาการปวดเมื่อยกล้ามเนื้อจากการนั่งทำงานนานเกินไป",
+      "action": "ลุยปิดจ็อบงานเอกสารที่คั่งค้างให้หมดก่อนเริ่มสัปดาห์ใหม่"
+    }
+  },
+  {
+    "dayIndex": 5,
+    "date": "2026-10-22",
+    "dayOfWeek": "พฤหัสบดี",
+    "bazi": "Ji (ดิน-) Si (มะเส็ง/ไฟ)",
+    "taksa": {
+      "sri": "ส้มสด",
+      "dech": "แดงเลือดหมู",
+      "kalakini": "ขาว"
+    },
+    "netScore": 80,
+    "transits": {
+      "Sun": {
+        "deg": 209.17632386124217,
+        "signStr": "ตุลย์ 29°10'"
+      },
+      "Moon": {
+        "deg": 343.39594019277547,
+        "signStr": "มีน 13°23'"
+      },
+      "Mercury": {
+        "deg": 230.7898072409727,
+        "signStr": "พิจิก 20°47'"
+      },
+      "Venus": {
+        "deg": 211.7103870253661,
+        "signStr": "พิจิก 1°42'"
+      },
+      "Mars": {
+        "deg": 133.73910198159774,
+        "signStr": "สิงห์ 13°44'"
+      },
+      "Jupiter": {
+        "deg": 143.07860550612887,
+        "signStr": "สิงห์ 23°04'"
+      },
+      "Saturn": {
+        "deg": 9.920527700922841,
+        "signStr": "เมษ 9°55'"
+      },
+      "Uranus": {
+        "deg": 64.99679247214023,
+        "signStr": "เมถุน 4°59'"
+      },
+      "Neptune": {
+        "deg": 2.299737861502295,
+        "signStr": "เมษ 2°17'"
+      },
+      "Pluto": {
+        "deg": 303.07807229298805,
+        "signStr": "กุมภ์ 3°04'"
+      }
+    },
+    "aspectsCount": 20,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Chiron",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.22
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.3
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.37
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.48
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "ASC",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.67
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 อาทิตย์ยกเข้าราศีพิจิก — จุดสลับพลังงานสู่ Grand Water Trine (Score 86)",
+      "summary": "จุดเปลี่ยนสำคัญที่สุดของเดือน! ดวงอาทิตย์เข้าสู่ธาตุน้ำ ตรีโกณกับดวงอาทิตย์มีนและลัคนากรกฎของคุณครู",
+      "career": "ฟ้าเปิดรอบแรก! ผู้ใหญ่และผู้บริหารมองเห็นคุณค่า ข้อเสนอหรือผลงานจะได้รับการอนุมัติง่ายขึ้น",
+      "finance": "สัญญาณการเงินสดใส มีโอกาสได้รับผลประโยชน์ตอบแทน หรือมองเห็นลู่ทางกำไร",
+      "emotion": "ความโล่งใจขั้นสุด พลังชีวิต (Vitality) และความสบายใจพุ่งสูง",
+      "warning": "อย่าประมาทหรือละเลยรายละเอียดเล็กๆ ของงาน",
+      "action": "นำเสนอผลงาน หรือเข้าพบผู้ใหญ่ สวมเสื้อผ้าสีส้มสดหรือแดงเลือดหมู"
+    }
+  },
+  {
+    "dayIndex": 6,
+    "date": "2026-10-23",
+    "dayOfWeek": "ศุกร์",
+    "bazi": "Geng (ทอง+) Wu (มะเมีย/ไฟ)",
+    "taksa": {
+      "sri": "เขียว",
+      "dech": "แดง/ไวน์แดง",
+      "kalakini": "ขาว/ฟ้าอ่อน"
+    },
+    "netScore": 78,
+    "transits": {
+      "Sun": {
+        "deg": 210.17125614037772,
+        "signStr": "พิจิก 0°10'"
+      },
+      "Moon": {
+        "deg": 356.5720721433294,
+        "signStr": "มีน 26°34'"
+      },
+      "Mercury": {
+        "deg": 230.94505679181324,
+        "signStr": "พิจิก 20°56'"
+      },
+      "Venus": {
+        "deg": 211.10136238260034,
+        "signStr": "พิจิก 1°06'"
+      },
+      "Mars": {
+        "deg": 134.26921378293645,
+        "signStr": "สิงห์ 14°16'"
+      },
+      "Jupiter": {
+        "deg": 143.2195099787887,
+        "signStr": "สิงห์ 23°13'"
+      },
+      "Saturn": {
+        "deg": 9.84918912920867,
+        "signStr": "เมษ 9°50'"
+      },
+      "Uranus": {
+        "deg": 64.96491171474032,
+        "signStr": "เมถุน 4°57'"
+      },
+      "Neptune": {
+        "deg": 2.275863668612441,
+        "signStr": "เมษ 2°16'"
+      },
+      "Pluto": {
+        "deg": 303.08134549638845,
+        "signStr": "กุมภ์ 3°04'"
+      }
+    },
+    "aspectsCount": 20,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Neptune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.16
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.32
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.37
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.48
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Chiron",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.75
+      }
+    ],
+    "narrative": {
+      "headline": "วันปิยมหาราช — พลังงานธาตุน้ำหล่อเลี้ยงจิตวิญญาณ (Score 74)",
+      "summary": "วันหยุดที่พลังงานดวงดาวส่งเสริมการฟื้นฟูจิตใจและแรงบันดาลใจ",
+      "career": "พักสมองจากงานราชการ เป็นเวลาของการคิดสร้างสรรค์ในโลกส่วนตัว",
+      "finance": "การเงินมั่นคง เหมาะกับการวางแผนจัดสรรเงินออม",
+      "emotion": "ผ่อนคลาย อารมณ์เย็นและอบอุ่น เข้าใจคนรอบข้างได้ดีขึ้น",
+      "warning": "ระวังการกินอาหารรสจัดหรืออาหารที่ไม่คุ้นเคย",
+      "action": "ออกไปนั่งร้านกาแฟสงบๆ หรือทำงานศิลปะที่รักเพื่อชาร์จพลัง"
+    }
+  },
+  {
+    "dayIndex": 7,
+    "date": "2026-10-24",
+    "dayOfWeek": "เสาร์",
+    "bazi": "Xin (ทอง-) Wei (มะแม/ดิน)",
+    "taksa": {
+      "sri": "ดำ/ม่วง",
+      "dech": "ส้มอมน้ำตาล",
+      "kalakini": "ขาว"
+    },
+    "netScore": 51,
+    "transits": {
+      "Sun": {
+        "deg": 211.16669959873371,
+        "signStr": "พิจิก 1°10'"
+      },
+      "Moon": {
+        "deg": 10.171149021399337,
+        "signStr": "เมษ 10°10'"
+      },
+      "Mercury": {
+        "deg": 230.97470162583681,
+        "signStr": "พิจิก 20°58'"
+      },
+      "Venus": {
+        "deg": 210.4889734575043,
+        "signStr": "พิจิก 0°29'"
+      },
+      "Mars": {
+        "deg": 134.79654353053397,
+        "signStr": "สิงห์ 14°47'"
+      },
+      "Jupiter": {
+        "deg": 143.35835929267267,
+        "signStr": "สิงห์ 23°21'"
+      },
+      "Saturn": {
+        "deg": 9.778649392958553,
+        "signStr": "เมษ 9°46'"
+      },
+      "Uranus": {
+        "deg": 64.9324770002373,
+        "signStr": "เมถุน 4°55'"
+      },
+      "Neptune": {
+        "deg": 2.252279723168518,
+        "signStr": "เมษ 2°15'"
+      },
+      "Pluto": {
+        "deg": 303.0850968412404,
+        "signStr": "กุมภ์ 3°05'"
+      }
+    },
+    "aspectsCount": 22,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.35
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.36
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.49
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Pluto",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.83
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 1.07
+      }
+    ],
+    "narrative": {
+      "headline": "วันเสาร์สำรวจตัวเอง — เสถียรภาพและระเบียบวินัย",
+      "summary": "ดาวเสาร์ช่วยให้คุณมองโลกตามความเป็นจริงและจัดวางเป้าหมายได้อย่างเป็นระบบ",
+      "career": "เหมาะกับการเคลียร์โต๊ะทำงาน จัดแฟ้มเอกสาร หรือเตรียมแผนสอนสัปดาห์หน้า",
+      "finance": "รายจ่ายคงที่ ไม่มีความผันผวน",
+      "emotion": "นิ่ง สุขุม มีความสันโดษสูง",
+      "warning": "หลีกเลี่ยงการไปในที่คนพลุกพล่านหรือเสียงดัง",
+      "action": "จัดมุมทำงาน จัดบ้าน หรือพักผ่อนในห้องนอนที่จัดฮวงจุ้ยไว้"
+    }
+  },
+  {
+    "dayIndex": 8,
+    "date": "2026-10-25",
+    "dayOfWeek": "อาทิตย์",
+    "bazi": "Ren (น้ำ+) Shen (วอก/ทอง)",
+    "taksa": {
+      "sri": "แดง",
+      "dech": "ส้ม/ทอง",
+      "kalakini": "ขาว"
+    },
+    "netScore": 42,
+    "transits": {
+      "Sun": {
+        "deg": 212.16267325164605,
+        "signStr": "พิจิก 2°09'"
+      },
+      "Moon": {
+        "deg": 24.174676246106742,
+        "signStr": "เมษ 24°10'"
+      },
+      "Mercury": {
+        "deg": 230.86959154440962,
+        "signStr": "พิจิก 20°52'"
+      },
+      "Venus": {
+        "deg": 209.87745489963532,
+        "signStr": "ตุลย์ 29°52'"
+      },
+      "Mars": {
+        "deg": 135.32106006502752,
+        "signStr": "สิงห์ 15°19'"
+      },
+      "Jupiter": {
+        "deg": 143.49513192591053,
+        "signStr": "สิงห์ 23°29'"
+      },
+      "Saturn": {
+        "deg": 9.7089500705468,
+        "signStr": "เมษ 9°42'"
+      },
+      "Uranus": {
+        "deg": 64.8995069053089,
+        "signStr": "เมถุน 4°53'"
+      },
+      "Neptune": {
+        "deg": 2.2290005199031984,
+        "signStr": "เมษ 2°13'"
+      },
+      "Pluto": {
+        "deg": 303.08933157204325,
+        "signStr": "กุมภ์ 3°05'"
+      }
+    },
+    "aspectsCount": 19,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Fortune",
+        "aspect": "Opposition (☍)",
+        "symbol": "☍",
+        "nature": "challenging",
+        "orb": 0.26
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.36
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.37
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Uranus",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.44
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.49
+      }
+    ],
+    "narrative": {
+      "headline": "⚠️ Energy Dip — วันตั้งการ์ดและถอยกลับสู่ Safe Zone (Score 48)",
+      "summary": "ดวงจันทร์จรทำมุมตึงตัวระยะสั้น อารมณ์อาจดิ่งลงชั่วคราวหรือมีความเหนื่อยล้าทางจิตใจ",
+      "career": "อย่าเพิ่งรีบร้อนรับปากงานเพิ่ม ทำเฉพาะสิ่งที่จำเป็น",
+      "finance": "ระวังการใช้เงินเพื่อบำบัดความเครียด",
+      "emotion": "อาจรู้สึกเหงา โดดเดี่ยว หรือคิดวนถึงเรื่องในอดีต",
+      "warning": "อย่าตอบโต้ข้อความหรือคุยเรื่องเครียดๆ กับคนในครอบครัวในวันนี้",
+      "action": "ปิดหน้าจอ นอนพักผ่อนเร็ว ดื่มน้ำอุ่นและฟังเพลงเบาๆ"
+    }
+  },
+  {
+    "dayIndex": 9,
+    "date": "2026-10-26",
+    "dayOfWeek": "จันทร์",
+    "bazi": "Gui (น้ำ-) You (ระกา/ทอง)",
+    "taksa": {
+      "sri": "ส้ม/ทอง",
+      "dech": "ดำ/เทา",
+      "kalakini": "ขาว"
+    },
+    "netScore": 70,
+    "transits": {
+      "Sun": {
+        "deg": 213.15919560282163,
+        "signStr": "พิจิก 3°09'"
+      },
+      "Moon": {
+        "deg": 38.520650091752614,
+        "signStr": "พฤษภ 8°31'"
+      },
+      "Mercury": {
+        "deg": 230.62153483853896,
+        "signStr": "พิจิก 20°37'"
+      },
+      "Venus": {
+        "deg": 209.27104380227215,
+        "signStr": "ตุลย์ 29°16'"
+      },
+      "Mars": {
+        "deg": 135.8427274837858,
+        "signStr": "สิงห์ 15°50'"
+      },
+      "Jupiter": {
+        "deg": 143.62980429494635,
+        "signStr": "สิงห์ 23°37'"
+      },
+      "Saturn": {
+        "deg": 9.640130811411815,
+        "signStr": "เมษ 9°38'"
+      },
+      "Uranus": {
+        "deg": 64.86601863740664,
+        "signStr": "เมถุน 4°51'"
+      },
+      "Neptune": {
+        "deg": 2.2060390385734854,
+        "signStr": "เมษ 2°12'"
+      },
+      "Pluto": {
+        "deg": 303.0940534838647,
+        "signStr": "กุมภ์ 3°05'"
+      }
+    },
+    "aspectsCount": 19,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Mercury",
+        "aspect": "Opposition (☍)",
+        "symbol": "☍",
+        "nature": "challenging",
+        "orb": 0.08
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Vertex",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.29
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.36
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.39
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.49
+      }
+    ],
+    "narrative": {
+      "headline": "🗣️ ดาวอังคารเล็งพุธ (Exact 0.12°) — ระวังวิวาทะและคำพูด",
+      "summary": "มุมเล็งที่รวดเร็วและรุนแรงระหว่างดาวแห่งการต่อสู้ (Mars) กับดาวแห่งการสื่อสาร (Mercury)",
+      "career": "อาจมีความเห็นไม่ตรงกันในที่ทำงาน หรือเจอกลุ่มคนที่พูดจาขัดหู",
+      "finance": "ระวังการทะเลาะเรื่องผลประโยชน์หรือข้อตกลงที่คลุมเครือ",
+      "emotion": "หงุดหงิดง่าย ใจร้อน อยากพูดตอกกลับทันที",
+      "warning": "ห้ามตอบโต้ทางแชตหรือใช้อารมณ์ในการประชุมเด็ดขาด นับ 1 ถึง 10 ก่อนพูด",
+      "action": "ใช้ความเงียบเป็นเกราะกำบัง สวมเสื้อผ้าโทนดำหรือเทาเข้มเพื่อคุมสติ"
+    }
+  },
+  {
+    "dayIndex": 10,
+    "date": "2026-10-27",
+    "dayOfWeek": "อังคาร",
+    "bazi": "Jia (ไม้+) Xu (จอ/ดิน)",
+    "taksa": {
+      "sri": "ทอง/มัสตาร์ด",
+      "dech": "ม่วงเข้ม/ดำ",
+      "kalakini": "ขาว"
+    },
+    "netScore": 56,
+    "transits": {
+      "Sun": {
+        "deg": 214.15628299658633,
+        "signStr": "พิจิก 4°09'"
+      },
+      "Moon": {
+        "deg": 53.108122383075084,
+        "signStr": "พฤษภ 23°06'"
+      },
+      "Mercury": {
+        "deg": 230.2240389031731,
+        "signStr": "พิจิก 20°13'"
+      },
+      "Venus": {
+        "deg": 208.67391816868823,
+        "signStr": "ตุลย์ 28°40'"
+      },
+      "Mars": {
+        "deg": 136.3615033965955,
+        "signStr": "สิงห์ 16°21'"
+      },
+      "Jupiter": {
+        "deg": 143.76234963653914,
+        "signStr": "สิงห์ 23°45'"
+      },
+      "Saturn": {
+        "deg": 9.572228596885875,
+        "signStr": "เมษ 9°34'"
+      },
+      "Uranus": {
+        "deg": 64.83202716420115,
+        "signStr": "เมถุน 4°49'"
+      },
+      "Neptune": {
+        "deg": 2.1834059045710816,
+        "signStr": "เมษ 2°11'"
+      },
+      "Pluto": {
+        "deg": 303.09926406571464,
+        "signStr": "กุมภ์ 3°05'"
+      }
+    },
+    "aspectsCount": 16,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.02
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.35
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.42
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Mercury",
+        "aspect": "Opposition (☍)",
+        "symbol": "☍",
+        "nature": "challenging",
+        "orb": 0.44
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.5
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.67
+      }
+    ],
+    "narrative": {
+      "headline": "Bazi Chen-Xu Clash — วันปรับสมดุลตารางชีวิต",
+      "summary": "พลังงานมังกรชนหมาในดวงจีน เตือนให้ระวังตารางเวลาแทรกซ้อน",
+      "career": "อาจมีงานด่วนเข้ามาขัดจังหวะงานหลัก ต้องจัดลำดับความสำคัญให้ดี",
+      "finance": "มีรายจ่ายจิปาถะเกี่ยวกับยานพาหนะหรือการเดินทาง",
+      "emotion": "รู้สึกวุ่นวายใจเล็กน้อย แต่รับมือได้",
+      "warning": "เช็กสภาพรถ ลมยาง และตรวจสอบเวลานัดหมายให้รอบคอบ",
+      "action": "ทำ To-Do List สั้นๆ 3 อย่างที่ต้องทำเสร็จให้ได้ในวันนี้"
+    }
+  },
+  {
+    "dayIndex": 11,
+    "date": "2026-10-28",
+    "dayOfWeek": "พุธ",
+    "bazi": "Yi (ไม้-) Hai (กุน/น้ำ)",
+    "taksa": {
+      "sri": "ส้มอิฐ",
+      "dech": "เทาควันบุหรี่",
+      "kalakini": "ขาว/ชมพูอ่อน"
+    },
+    "netScore": 51,
+    "transits": {
+      "Sun": {
+        "deg": 215.15394843582772,
+        "signStr": "พิจิก 5°09'"
+      },
+      "Moon": {
+        "deg": 67.81144682785343,
+        "signStr": "เมถุน 7°48'"
+      },
+      "Mercury": {
+        "deg": 229.67321933094627,
+        "signStr": "พิจิก 19°40'"
+      },
+      "Venus": {
+        "deg": 208.09013729881607,
+        "signStr": "ตุลย์ 28°05'"
+      },
+      "Mars": {
+        "deg": 136.87733783487027,
+        "signStr": "สิงห์ 16°52'"
+      },
+      "Jupiter": {
+        "deg": 143.89273742026623,
+        "signStr": "สิงห์ 23°53'"
+      },
+      "Saturn": {
+        "deg": 9.505277475596301,
+        "signStr": "เมษ 9°30'"
+      },
+      "Uranus": {
+        "deg": 64.79754483864879,
+        "signStr": "เมถุน 4°47'"
+      },
+      "Neptune": {
+        "deg": 2.1611090270405295,
+        "signStr": "เมษ 2°09'"
+      },
+      "Pluto": {
+        "deg": 303.1049621146397,
+        "signStr": "กุมภ์ 3°06'"
+      }
+    },
+    "aspectsCount": 19,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.02
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Sun",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.17
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.35
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.44
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.5
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.54
+      }
+    ],
+    "narrative": {
+      "headline": "เมฆหมอกจางหาย — เตรียมก้าวสู่ต้นเดือนพฤศจิกายน",
+      "summary": "มุมปะทะเริ่มคลายตัว พลังงานเริ่มนิ่งและกลับสู่ทิศทางบวก",
+      "career": "งานสอนและงานประจำเริ่มกลับมาเข้าที่เข้าทาง ความกดดันลดลง",
+      "finance": "เริ่มวางแผนงบประมาณสำหรับเดือนใหม่ได้อย่างราบรื่น",
+      "emotion": "จิตใจปลอดโปร่งขึ้น เริ่มมองเห็นแสงสว่างของสัปดาห์หน้า",
+      "warning": "อย่าเพิ่งประมาทเรื่องสุขภาพ พักผ่อนให้พอ",
+      "action": "สะสางภาระสิ้นเดือนให้จบ"
+    }
+  },
+  {
+    "dayIndex": 12,
+    "date": "2026-10-29",
+    "dayOfWeek": "พฤหัสบดี",
+    "bazi": "Bing (ไฟ+) Zi (ชวด/น้ำ)",
+    "taksa": {
+      "sri": "ส้มสด",
+      "dech": "แดงเลือดหมู",
+      "kalakini": "ขาว"
+    },
+    "netScore": 81,
+    "transits": {
+      "Sun": {
+        "deg": 216.1522009851047,
+        "signStr": "พิจิก 6°09'"
+      },
+      "Moon": {
+        "deg": 82.501252224034,
+        "signStr": "เมถุน 22°30'"
+      },
+      "Mercury": {
+        "deg": 228.96885176948962,
+        "signStr": "พิจิก 18°58'"
+      },
+      "Venus": {
+        "deg": 207.52358651504133,
+        "signStr": "ตุลย์ 27°31'"
+      },
+      "Mars": {
+        "deg": 137.39017299908923,
+        "signStr": "สิงห์ 17°23'"
+      },
+      "Jupiter": {
+        "deg": 144.020933403614,
+        "signStr": "สิงห์ 24°01'"
+      },
+      "Saturn": {
+        "deg": 9.439308842672054,
+        "signStr": "เมษ 9°26'"
+      },
+      "Uranus": {
+        "deg": 64.762581604327,
+        "signStr": "เมถุน 4°45'"
+      },
+      "Neptune": {
+        "deg": 2.1391537941942094,
+        "signStr": "เมษ 2°08'"
+      },
+      "Pluto": {
+        "deg": 303.11114390111493,
+        "signStr": "กุมภ์ 3°06'"
+      }
+    },
+    "aspectsCount": 24,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.03
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.34
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.41
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.46
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.51
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Neptune",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.79
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 81/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 13,
+    "date": "2026-10-30",
+    "dayOfWeek": "ศุกร์",
+    "bazi": "Ding (ไฟ-) Chou (ฉลู/ดิน)",
+    "taksa": {
+      "sri": "เขียว",
+      "dech": "แดง/ไวน์แดง",
+      "kalakini": "ขาว/ฟ้าอ่อน"
+    },
+    "netScore": 88,
+    "transits": {
+      "Sun": {
+        "deg": 217.15104575998225,
+        "signStr": "พิจิก 7°09'"
+      },
+      "Moon": {
+        "deg": 97.06564361511515,
+        "signStr": "กรกฎ 7°03'"
+      },
+      "Mercury": {
+        "deg": 228.11549866075592,
+        "signStr": "พิจิก 18°06'"
+      },
+      "Venus": {
+        "deg": 206.97792834643909,
+        "signStr": "ตุลย์ 26°58'"
+      },
+      "Mars": {
+        "deg": 137.89994387952447,
+        "signStr": "สิงห์ 17°53'"
+      },
+      "Jupiter": {
+        "deg": 144.1469003156099,
+        "signStr": "สิงห์ 24°08'"
+      },
+      "Saturn": {
+        "deg": 9.374352216090148,
+        "signStr": "เมษ 9°22'"
+      },
+      "Uranus": {
+        "deg": 64.72714574593842,
+        "signStr": "เมถุน 4°43'"
+      },
+      "Neptune": {
+        "deg": 2.117543788737584,
+        "signStr": "เมษ 2°07'"
+      },
+      "Pluto": {
+        "deg": 303.11780385053464,
+        "signStr": "กุมภ์ 3°07'"
+      }
+    },
+    "aspectsCount": 23,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.04
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Neptune",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.25
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.28
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.33
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.48
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.52
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 88/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 14,
+    "date": "2026-10-31",
+    "dayOfWeek": "เสาร์",
+    "bazi": "Wu (ดิน+) Yin (ขาล/ไม้)",
+    "taksa": {
+      "sri": "ดำ/ม่วง",
+      "dech": "ส้มอมน้ำตาล",
+      "kalakini": "ขาว"
+    },
+    "netScore": 77,
+    "transits": {
+      "Sun": {
+        "deg": 218.1504843908146,
+        "signStr": "พิจิก 8°09'"
+      },
+      "Moon": {
+        "deg": 111.42482763724414,
+        "signStr": "กรกฎ 21°25'"
+      },
+      "Mercury": {
+        "deg": 227.12358721723982,
+        "signStr": "พิจิก 17°07'"
+      },
+      "Venus": {
+        "deg": 206.45656180450024,
+        "signStr": "ตุลย์ 26°27'"
+      },
+      "Mars": {
+        "deg": 138.40657962937826,
+        "signStr": "สิงห์ 18°24'"
+      },
+      "Jupiter": {
+        "deg": 144.27059903219387,
+        "signStr": "สิงห์ 24°16'"
+      },
+      "Saturn": {
+        "deg": 9.310436356508124,
+        "signStr": "เมษ 9°18'"
+      },
+      "Uranus": {
+        "deg": 64.69124503703662,
+        "signStr": "เมถุน 4°41'"
+      },
+      "Neptune": {
+        "deg": 2.096281877025055,
+        "signStr": "เมษ 2°05'"
+      },
+      "Pluto": {
+        "deg": 303.12493559716984,
+        "signStr": "กุมภ์ 3°07'"
+      }
+    },
+    "aspectsCount": 22,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.04
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.16
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Sun",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.17
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Venus",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.22
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Neptune",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.27
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.33
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 77/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 15,
+    "date": "2026-11-01",
+    "dayOfWeek": "อาทิตย์",
+    "bazi": "Ji (ดิน-) Mao (เถาะ/ไม้)",
+    "taksa": {
+      "sri": "แดง",
+      "dech": "ส้ม/ทอง",
+      "kalakini": "ขาว"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 219.15051576445467,
+        "signStr": "พิจิก 9°09'"
+      },
+      "Moon": {
+        "deg": 125.53559242758423,
+        "signStr": "สิงห์ 5°32'"
+      },
+      "Mercury": {
+        "deg": 226.01025535397469,
+        "signStr": "พิจิก 16°00'"
+      },
+      "Venus": {
+        "deg": 205.96259077184962,
+        "signStr": "ตุลย์ 25°57'"
+      },
+      "Mars": {
+        "deg": 138.9100054381597,
+        "signStr": "สิงห์ 18°54'"
+      },
+      "Jupiter": {
+        "deg": 144.3919900120208,
+        "signStr": "สิงห์ 24°23'"
+      },
+      "Saturn": {
+        "deg": 9.247590501370665,
+        "signStr": "เมษ 9°14'"
+      },
+      "Uranus": {
+        "deg": 64.65488805449496,
+        "signStr": "เมถุน 4°39'"
+      },
+      "Neptune": {
+        "deg": 2.0753714465763773,
+        "signStr": "เมษ 2°04'"
+      },
+      "Pluto": {
+        "deg": 303.13253318847984,
+        "signStr": "กุมภ์ 3°07'"
+      }
+    },
+    "aspectsCount": 26,
+    "topAspects": [
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.04
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.05
+      },
+      {
+        "planet": "Mercury",
+        "natalPoint": "Mercury",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.09
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Mars",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.18
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.32
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Node",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.49
+      }
+    ],
+    "narrative": {
+      "headline": "🏆 สัปดาห์มหาโชคลาภ Grand Water Trine (Score 95/100)",
+      "summary": "นี่คือช่วงเวลาที่ทรงพลังที่สุดของรอบปี! อาทิตย์ในราศีพิจิกตรีโกณกับอาทิตย์มีนแบบองศาเป๊ะ ผสานพฤหัสในราศีสิงห์",
+      "career": "จุดพีคของความสำเร็จ! เสนอผลงาน แผนงาน หรือขอความช่วยเหลือจากผู้ใหญ่จะได้รับการตอบรับยอดเยี่ยม",
+      "finance": "ช่องทางรายได้เปิดกว้าง มีโอกาสได้รับเงินพิเศษ หรือมีความก้าวหน้าเรื่องอาชีพเสริมอย่างเด่นชัด",
+      "emotion": "เบิกบาน มั่นใจ อิ่มเอมใจ มีความสุขกับการทำงานและการใช้ชีวิต",
+      "warning": "อย่าลังเลที่จะคว้าโอกาส โอกาสดีๆ มักไม่รอนาน",
+      "action": "ลงมือทำโปรเจกต์สำคัญ เจรจาเรื่องเงิน หรือเปิดตัวผลงานใหม่ได้ทันที!"
+    }
+  },
+  {
+    "dayIndex": 16,
+    "date": "2026-11-02",
+    "dayOfWeek": "จันทร์",
+    "bazi": "Geng (ทอง+) Chen (มะโรง/ดิน)",
+    "taksa": {
+      "sri": "ส้ม/ทอง",
+      "dech": "ดำ/เทา",
+      "kalakini": "ขาว"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 220.15113680823902,
+        "signStr": "พิจิก 10°09'"
+      },
+      "Moon": {
+        "deg": 139.38656797537743,
+        "signStr": "สิงห์ 19°23'"
+      },
+      "Mercury": {
+        "deg": 224.79973922661196,
+        "signStr": "พิจิก 14°47'"
+      },
+      "Venus": {
+        "deg": 205.49880186717084,
+        "signStr": "ตุลย์ 25°29'"
+      },
+      "Mars": {
+        "deg": 139.41014457186594,
+        "signStr": "สิงห์ 19°24'"
+      },
+      "Jupiter": {
+        "deg": 144.51103471435502,
+        "signStr": "สิงห์ 24°30'"
+      },
+      "Saturn": {
+        "deg": 9.185845455912045,
+        "signStr": "เมษ 9°11'"
+      },
+      "Uranus": {
+        "deg": 64.6180853941771,
+        "signStr": "เมถุน 4°37'"
+      },
+      "Neptune": {
+        "deg": 2.0548175343722934,
+        "signStr": "เมษ 2°03'"
+      },
+      "Pluto": {
+        "deg": 303.1405921855241,
+        "signStr": "กุมภ์ 3°08'"
+      }
+    },
+    "aspectsCount": 27,
+    "topAspects": [
+      {
+        "planet": "Moon",
+        "natalPoint": "Node",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Node",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.01
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.06
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.08
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Moon",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.29
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Moon",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.31
+      }
+    ],
+    "narrative": {
+      "headline": "🏆 สัปดาห์มหาโชคลาภ Grand Water Trine (Score 95/100)",
+      "summary": "นี่คือช่วงเวลาที่ทรงพลังที่สุดของรอบปี! อาทิตย์ในราศีพิจิกตรีโกณกับอาทิตย์มีนแบบองศาเป๊ะ ผสานพฤหัสในราศีสิงห์",
+      "career": "จุดพีคของความสำเร็จ! เสนอผลงาน แผนงาน หรือขอความช่วยเหลือจากผู้ใหญ่จะได้รับการตอบรับยอดเยี่ยม",
+      "finance": "ช่องทางรายได้เปิดกว้าง มีโอกาสได้รับเงินพิเศษ หรือมีความก้าวหน้าเรื่องอาชีพเสริมอย่างเด่นชัด",
+      "emotion": "เบิกบาน มั่นใจ อิ่มเอมใจ มีความสุขกับการทำงานและการใช้ชีวิต",
+      "warning": "อย่าลังเลที่จะคว้าโอกาส โอกาสดีๆ มักไม่รอนาน",
+      "action": "ลงมือทำโปรเจกต์สำคัญ เจรจาเรื่องเงิน หรือเปิดตัวผลงานใหม่ได้ทันที!"
+    }
+  },
+  {
+    "dayIndex": 17,
+    "date": "2026-11-03",
+    "dayOfWeek": "อังคาร",
+    "bazi": "Xin (ทอง-) Si (มะเส็ง/ไฟ)",
+    "taksa": {
+      "sri": "ทอง/มัสตาร์ด",
+      "dech": "ม่วงเข้ม/ดำ",
+      "kalakini": "ขาว"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 221.1523430939616,
+        "signStr": "พิจิก 11°09'"
+      },
+      "Moon": {
+        "deg": 152.9881454760404,
+        "signStr": "กันย์ 2°59'"
+      },
+      "Mercury": {
+        "deg": 223.52307811379433,
+        "signStr": "พิจิก 13°31'"
+      },
+      "Venus": {
+        "deg": 205.06765153289462,
+        "signStr": "ตุลย์ 25°04'"
+      },
+      "Mars": {
+        "deg": 139.90692023055107,
+        "signStr": "สิงห์ 19°54'"
+      },
+      "Jupiter": {
+        "deg": 144.62769673043783,
+        "signStr": "สิงห์ 24°37'"
+      },
+      "Saturn": {
+        "deg": 9.125234308941534,
+        "signStr": "เมษ 9°07'"
+      },
+      "Uranus": {
+        "deg": 64.58085054194835,
+        "signStr": "เมถุน 4°34'"
+      },
+      "Neptune": {
+        "deg": 2.034627609702619,
+        "signStr": "เมษ 2°02'"
+      },
+      "Pluto": {
+        "deg": 303.1491104261633,
+        "signStr": "กุมภ์ 3°08'"
+      }
+    },
+    "aspectsCount": 25,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.07
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Pluto",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.09
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Jupiter",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.13
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.2
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Moon",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.21
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.3
+      }
+    ],
+    "narrative": {
+      "headline": "🏆 สัปดาห์มหาโชคลาภ Grand Water Trine (Score 95/100)",
+      "summary": "นี่คือช่วงเวลาที่ทรงพลังที่สุดของรอบปี! อาทิตย์ในราศีพิจิกตรีโกณกับอาทิตย์มีนแบบองศาเป๊ะ ผสานพฤหัสในราศีสิงห์",
+      "career": "จุดพีคของความสำเร็จ! เสนอผลงาน แผนงาน หรือขอความช่วยเหลือจากผู้ใหญ่จะได้รับการตอบรับยอดเยี่ยม",
+      "finance": "ช่องทางรายได้เปิดกว้าง มีโอกาสได้รับเงินพิเศษ หรือมีความก้าวหน้าเรื่องอาชีพเสริมอย่างเด่นชัด",
+      "emotion": "เบิกบาน มั่นใจ อิ่มเอมใจ มีความสุขกับการทำงานและการใช้ชีวิต",
+      "warning": "อย่าลังเลที่จะคว้าโอกาส โอกาสดีๆ มักไม่รอนาน",
+      "action": "ลงมือทำโปรเจกต์สำคัญ เจรจาเรื่องเงิน หรือเปิดตัวผลงานใหม่ได้ทันที!"
+    }
+  },
+  {
+    "dayIndex": 18,
+    "date": "2026-11-04",
+    "dayOfWeek": "พุธ",
+    "bazi": "Ren (น้ำ+) Wu (มะเมีย/ไฟ)",
+    "taksa": {
+      "sri": "ส้มอิฐ",
+      "dech": "เทาควันบุหรี่",
+      "kalakini": "ขาว/ชมพูอ่อน"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 222.1541291018425,
+        "signStr": "พิจิก 12°09'"
+      },
+      "Moon": {
+        "deg": 166.36126891202017,
+        "signStr": "กันย์ 16°21'"
+      },
+      "Mercury": {
+        "deg": 222.21698542590178,
+        "signStr": "พิจิก 12°13'"
+      },
+      "Venus": {
+        "deg": 204.67126158978937,
+        "signStr": "ตุลย์ 24°40'"
+      },
+      "Mars": {
+        "deg": 140.40025692553232,
+        "signStr": "สิงห์ 20°24'"
+      },
+      "Jupiter": {
+        "deg": 144.74194242384746,
+        "signStr": "สิงห์ 24°44'"
+      },
+      "Saturn": {
+        "deg": 9.065792615065646,
+        "signStr": "เมษ 9°03'"
+      },
+      "Uranus": {
+        "deg": 64.54320022451154,
+        "signStr": "เมถุน 4°32'"
+      },
+      "Neptune": {
+        "deg": 2.0148118458854216,
+        "signStr": "เมษ 2°00'"
+      },
+      "Pluto": {
+        "deg": 303.15808828745196,
+        "signStr": "กุมภ์ 3°09'"
+      }
+    },
+    "aspectsCount": 22,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.08
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Fortune",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.24
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.29
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.31
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.45
+      },
+      {
+        "planet": "Mercury",
+        "natalPoint": "ASC",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.51
+      }
+    ],
+    "narrative": {
+      "headline": "🏆 สัปดาห์มหาโชคลาภ Grand Water Trine (Score 95/100)",
+      "summary": "นี่คือช่วงเวลาที่ทรงพลังที่สุดของรอบปี! อาทิตย์ในราศีพิจิกตรีโกณกับอาทิตย์มีนแบบองศาเป๊ะ ผสานพฤหัสในราศีสิงห์",
+      "career": "จุดพีคของความสำเร็จ! เสนอผลงาน แผนงาน หรือขอความช่วยเหลือจากผู้ใหญ่จะได้รับการตอบรับยอดเยี่ยม",
+      "finance": "ช่องทางรายได้เปิดกว้าง มีโอกาสได้รับเงินพิเศษ หรือมีความก้าวหน้าเรื่องอาชีพเสริมอย่างเด่นชัด",
+      "emotion": "เบิกบาน มั่นใจ อิ่มเอมใจ มีความสุขกับการทำงานและการใช้ชีวิต",
+      "warning": "อย่าลังเลที่จะคว้าโอกาส โอกาสดีๆ มักไม่รอนาน",
+      "action": "ลงมือทำโปรเจกต์สำคัญ เจรจาเรื่องเงิน หรือเปิดตัวผลงานใหม่ได้ทันที!"
+    }
+  },
+  {
+    "dayIndex": 19,
+    "date": "2026-11-05",
+    "dayOfWeek": "พฤหัสบดี",
+    "bazi": "Gui (น้ำ-) Wei (มะแม/ดิน)",
+    "taksa": {
+      "sri": "ส้มสด",
+      "dech": "แดงเลือดหมู",
+      "kalakini": "ขาว"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 223.15648808169718,
+        "signStr": "พิจิก 13°09'"
+      },
+      "Moon": {
+        "deg": 179.5279942105527,
+        "signStr": "กันย์ 29°31'"
+      },
+      "Mercury": {
+        "deg": 220.9218838562489,
+        "signStr": "พิจิก 10°55'"
+      },
+      "Venus": {
+        "deg": 204.31142216471176,
+        "signStr": "ตุลย์ 24°18'"
+      },
+      "Mars": {
+        "deg": 140.89008118608652,
+        "signStr": "สิงห์ 20°53'"
+      },
+      "Jupiter": {
+        "deg": 144.85374098035857,
+        "signStr": "สิงห์ 24°51'"
+      },
+      "Saturn": {
+        "deg": 9.0075579920155,
+        "signStr": "เมษ 9°00'"
+      },
+      "Uranus": {
+        "deg": 64.50515417099375,
+        "signStr": "เมถุน 4°30'"
+      },
+      "Neptune": {
+        "deg": 1.995382820301717,
+        "signStr": "เมษ 1°59'"
+      },
+      "Pluto": {
+        "deg": 303.16752838765416,
+        "signStr": "กุมภ์ 3°10'"
+      }
+    },
+    "aspectsCount": 25,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.09
+      },
+      {
+        "planet": "Venus",
+        "natalPoint": "Fortune",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.12
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.28
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Venus",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.31
+      },
+      {
+        "planet": "Mercury",
+        "natalPoint": "Jupiter",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.36
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.39
+      }
+    ],
+    "narrative": {
+      "headline": "🏆 สัปดาห์มหาโชคลาภ Grand Water Trine (Score 95/100)",
+      "summary": "นี่คือช่วงเวลาที่ทรงพลังที่สุดของรอบปี! อาทิตย์ในราศีพิจิกตรีโกณกับอาทิตย์มีนแบบองศาเป๊ะ ผสานพฤหัสในราศีสิงห์",
+      "career": "จุดพีคของความสำเร็จ! เสนอผลงาน แผนงาน หรือขอความช่วยเหลือจากผู้ใหญ่จะได้รับการตอบรับยอดเยี่ยม",
+      "finance": "ช่องทางรายได้เปิดกว้าง มีโอกาสได้รับเงินพิเศษ หรือมีความก้าวหน้าเรื่องอาชีพเสริมอย่างเด่นชัด",
+      "emotion": "เบิกบาน มั่นใจ อิ่มเอมใจ มีความสุขกับการทำงานและการใช้ชีวิต",
+      "warning": "อย่าลังเลที่จะคว้าโอกาส โอกาสดีๆ มักไม่รอนาน",
+      "action": "ลงมือทำโปรเจกต์สำคัญ เจรจาเรื่องเงิน หรือเปิดตัวผลงานใหม่ได้ทันที!"
+    }
+  },
+  {
+    "dayIndex": 20,
+    "date": "2026-11-06",
+    "dayOfWeek": "ศุกร์",
+    "bazi": "Jia (ไม้+) Shen (วอก/ทอง)",
+    "taksa": {
+      "sri": "เขียว",
+      "dech": "แดง/ไวน์แดง",
+      "kalakini": "ขาว/ฟ้าอ่อน"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 224.15941155893066,
+        "signStr": "พิจิก 14°09'"
+      },
+      "Moon": {
+        "deg": 192.5052548573658,
+        "signStr": "ตุลย์ 12°30'"
+      },
+      "Mercury": {
+        "deg": 219.67929753357367,
+        "signStr": "พิจิก 9°40'"
+      },
+      "Venus": {
+        "deg": 203.98960073848195,
+        "signStr": "ตุลย์ 23°59'"
+      },
+      "Mars": {
+        "deg": 141.3763215467824,
+        "signStr": "สิงห์ 21°22'"
+      },
+      "Jupiter": {
+        "deg": 144.96306389173273,
+        "signStr": "สิงห์ 24°57'"
+      },
+      "Saturn": {
+        "deg": 8.950569200019748,
+        "signStr": "เมษ 8°57'"
+      },
+      "Uranus": {
+        "deg": 64.46673433667438,
+        "signStr": "เมถุน 4°28'"
+      },
+      "Neptune": {
+        "deg": 1.9763547001054145,
+        "signStr": "เมษ 1°58'"
+      },
+      "Pluto": {
+        "deg": 303.1774347850295,
+        "signStr": "กุมภ์ 3°10'"
+      }
+    },
+    "aspectsCount": 26,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.1
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Venus",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.18
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "ASC",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.22
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.27
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.33
+      },
+      {
+        "planet": "Mercury",
+        "natalPoint": "Mars",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.35
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 95/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 21,
+    "date": "2026-11-07",
+    "dayOfWeek": "เสาร์",
+    "bazi": "Yi (ไม้-) You (ระกา/ทอง)",
+    "taksa": {
+      "sri": "ดำ/ม่วง",
+      "dech": "ส้มอมน้ำตาล",
+      "kalakini": "ขาว"
+    },
+    "netScore": 92,
+    "transits": {
+      "Sun": {
+        "deg": 225.16288863287193,
+        "signStr": "พิจิก 15°09'"
+      },
+      "Moon": {
+        "deg": 205.30233646625845,
+        "signStr": "ตุลย์ 25°18'"
+      },
+      "Mercury": {
+        "deg": 218.52897075822614,
+        "signStr": "พิจิก 8°31'"
+      },
+      "Venus": {
+        "deg": 203.7069560622393,
+        "signStr": "ตุลย์ 23°42'"
+      },
+      "Mars": {
+        "deg": 141.85890791240064,
+        "signStr": "สิงห์ 21°51'"
+      },
+      "Jupiter": {
+        "deg": 145.0698840150463,
+        "signStr": "สิงห์ 25°04'"
+      },
+      "Saturn": {
+        "deg": 8.89486487518983,
+        "signStr": "เมษ 8°53'"
+      },
+      "Uranus": {
+        "deg": 64.42796374980149,
+        "signStr": "เมถุน 4°25'"
+      },
+      "Neptune": {
+        "deg": 1.9577420771728236,
+        "signStr": "เมษ 1°57'"
+      },
+      "Pluto": {
+        "deg": 303.1878118356655,
+        "signStr": "กุมภ์ 3°11'"
+      }
+    },
+    "aspectsCount": 21,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.11
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.26
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.27
+      },
+      {
+        "planet": "Mercury",
+        "natalPoint": "Sun",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.55
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.59
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.64
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 92/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 22,
+    "date": "2026-11-08",
+    "dayOfWeek": "อาทิตย์",
+    "bazi": "Bing (ไฟ+) Xu (จอ/ดิน)",
+    "taksa": {
+      "sri": "แดง",
+      "dech": "ส้ม/ทอง",
+      "kalakini": "ขาว"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 226.16690528205635,
+        "signStr": "พิจิก 16°10'"
+      },
+      "Moon": {
+        "deg": 217.92191660706288,
+        "signStr": "พิจิก 7°55'"
+      },
+      "Mercury": {
+        "deg": 217.50617038779652,
+        "signStr": "พิจิก 7°30'"
+      },
+      "Venus": {
+        "deg": 203.4643558079292,
+        "signStr": "ตุลย์ 23°27'"
+      },
+      "Mars": {
+        "deg": 142.33777051800004,
+        "signStr": "สิงห์ 22°20'"
+      },
+      "Jupiter": {
+        "deg": 145.17417443533748,
+        "signStr": "สิงห์ 25°10'"
+      },
+      "Saturn": {
+        "deg": 8.840482158936766,
+        "signStr": "เมษ 8°50'"
+      },
+      "Uranus": {
+        "deg": 64.3888652184268,
+        "signStr": "เมถุน 4°23'"
+      },
+      "Neptune": {
+        "deg": 1.939558688322729,
+        "signStr": "เมษ 1°56'"
+      },
+      "Pluto": {
+        "deg": 303.19866294428186,
+        "signStr": "กุมภ์ 3°11'"
+      }
+    },
+    "aspectsCount": 20,
+    "topAspects": [
+      {
+        "planet": "Moon",
+        "natalPoint": "Sun",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.06
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.12
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.22
+      },
+      {
+        "planet": "Sun",
+        "natalPoint": "Mercury",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.25
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.25
+      },
+      {
+        "planet": "Mercury",
+        "natalPoint": "Sun",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.47
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 95/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 23,
+    "date": "2026-11-09",
+    "dayOfWeek": "จันทร์",
+    "bazi": "Ding (ไฟ-) Hai (กุน/น้ำ)",
+    "taksa": {
+      "sri": "ส้ม/ทอง",
+      "dech": "ดำ/เทา",
+      "kalakini": "ขาว"
+    },
+    "netScore": 83,
+    "transits": {
+      "Sun": {
+        "deg": 227.17144391043163,
+        "signStr": "พิจิก 17°10'"
+      },
+      "Moon": {
+        "deg": 230.36387939241442,
+        "signStr": "พิจิก 20°21'"
+      },
+      "Mercury": {
+        "deg": 216.63958794980562,
+        "signStr": "พิจิก 6°38'"
+      },
+      "Venus": {
+        "deg": 203.2623969934207,
+        "signStr": "ตุลย์ 23°15'"
+      },
+      "Mars": {
+        "deg": 142.8128387732728,
+        "signStr": "สิงห์ 22°48'"
+      },
+      "Jupiter": {
+        "deg": 145.2759073968647,
+        "signStr": "สิงห์ 25°16'"
+      },
+      "Saturn": {
+        "deg": 8.787455486076057,
+        "signStr": "เมษ 8°47'"
+      },
+      "Uranus": {
+        "deg": 64.3494601609444,
+        "signStr": "เมถุน 4°20'"
+      },
+      "Neptune": {
+        "deg": 1.9218162804961694,
+        "signStr": "เมษ 1°55'"
+      },
+      "Pluto": {
+        "deg": 303.209989465151,
+        "signStr": "กุมภ์ 3°12'"
+      }
+    },
+    "aspectsCount": 18,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.13
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.17
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.24
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.61
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.68
+      },
+      {
+        "planet": "Jupiter",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.85
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 83/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 24,
+    "date": "2026-11-10",
+    "dayOfWeek": "อังคาร",
+    "bazi": "Wu (ดิน+) Zi (ชวด/น้ำ)",
+    "taksa": {
+      "sri": "ทอง/มัสตาร์ด",
+      "dech": "ม่วงเข้ม/ดำ",
+      "kalakini": "ขาว"
+    },
+    "netScore": 94,
+    "transits": {
+      "Sun": {
+        "deg": 228.17648333531648,
+        "signStr": "พิจิก 18°10'"
+      },
+      "Moon": {
+        "deg": 242.63058966318135,
+        "signStr": "ธนู 2°37'"
+      },
+      "Mercury": {
+        "deg": 215.95010395051025,
+        "signStr": "พิจิก 5°57'"
+      },
+      "Venus": {
+        "deg": 203.1014283988917,
+        "signStr": "ตุลย์ 23°06'"
+      },
+      "Mars": {
+        "deg": 143.28404028866714,
+        "signStr": "สิงห์ 23°17'"
+      },
+      "Jupiter": {
+        "deg": 145.37505354959137,
+        "signStr": "สิงห์ 25°22'"
+      },
+      "Saturn": {
+        "deg": 8.735815761199285,
+        "signStr": "เมษ 8°44'"
+      },
+      "Uranus": {
+        "deg": 64.30976779611693,
+        "signStr": "เมถุน 4°18'"
+      },
+      "Neptune": {
+        "deg": 1.9045238505307471,
+        "signStr": "เมษ 1°54'"
+      },
+      "Pluto": {
+        "deg": 303.2217899801763,
+        "signStr": "กุมภ์ 3°13'"
+      }
+    },
+    "aspectsCount": 21,
+    "topAspects": [
+      {
+        "planet": "Moon",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.03
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.12
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.14
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.23
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Pluto",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.45
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.62
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 94/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 25,
+    "date": "2026-11-11",
+    "dayOfWeek": "พุธ",
+    "bazi": "Ji (ดิน-) Chou (ฉลู/ดิน)",
+    "taksa": {
+      "sri": "ส้มอิฐ",
+      "dech": "เทาควันบุหรี่",
+      "kalakini": "ขาว/ชมพูอ่อน"
+    },
+    "netScore": 95,
+    "transits": {
+      "Sun": {
+        "deg": 229.1819993381412,
+        "signStr": "พิจิก 19°10'"
+      },
+      "Moon": {
+        "deg": 254.7321940826144,
+        "signStr": "ธนู 14°43'"
+      },
+      "Mercury": {
+        "deg": 215.4504727509913,
+        "signStr": "พิจิก 5°27'"
+      },
+      "Venus": {
+        "deg": 202.98157432528828,
+        "signStr": "ตุลย์ 22°58'"
+      },
+      "Mars": {
+        "deg": 143.75130032530285,
+        "signStr": "สิงห์ 23°45'"
+      },
+      "Jupiter": {
+        "deg": 145.47158168677285,
+        "signStr": "สิงห์ 25°28'"
+      },
+      "Saturn": {
+        "deg": 8.685590073058266,
+        "signStr": "เมษ 8°41'"
+      },
+      "Uranus": {
+        "deg": 64.26980485176747,
+        "signStr": "เมถุน 4°16'"
+      },
+      "Neptune": {
+        "deg": 1.8876874116424454,
+        "signStr": "เมษ 1°53'"
+      },
+      "Pluto": {
+        "deg": 303.23406010393194,
+        "signStr": "กุมภ์ 3°14'"
+      }
+    },
+    "aspectsCount": 20,
+    "topAspects": [
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.07
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.15
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.22
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.63
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.68
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.71
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 95/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 26,
+    "date": "2026-11-12",
+    "dayOfWeek": "พฤหัสบดี",
+    "bazi": "Geng (ทอง+) Yin (ขาล/ไม้)",
+    "taksa": {
+      "sri": "ส้มสด",
+      "dech": "แดงเลือดหมู",
+      "kalakini": "ขาว"
+    },
+    "netScore": 77,
+    "transits": {
+      "Sun": {
+        "deg": 230.18796578862006,
+        "signStr": "พิจิก 20°11'"
+      },
+      "Moon": {
+        "deg": 266.6908497927597,
+        "signStr": "ธนู 26°41'"
+      },
+      "Mercury": {
+        "deg": 215.14580477534668,
+        "signStr": "พิจิก 5°08'"
+      },
+      "Venus": {
+        "deg": 202.90275911627333,
+        "signStr": "ตุลย์ 22°54'"
+      },
+      "Mars": {
+        "deg": 144.21454180362633,
+        "signStr": "สิงห์ 24°12'"
+      },
+      "Jupiter": {
+        "deg": 145.56545904170318,
+        "signStr": "สิงห์ 25°33'"
+      },
+      "Saturn": {
+        "deg": 8.636801986676065,
+        "signStr": "เมษ 8°38'"
+      },
+      "Uranus": {
+        "deg": 64.22958584203982,
+        "signStr": "เมถุน 4°13'"
+      },
+      "Neptune": {
+        "deg": 1.8713103298288296,
+        "signStr": "เมษ 1°52'"
+      },
+      "Pluto": {
+        "deg": 303.24679285707987,
+        "signStr": "กุมภ์ 3°14'"
+      }
+    },
+    "aspectsCount": 20,
+    "topAspects": [
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.02
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.17
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.2
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.22
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.65
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.73
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 77/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 27,
+    "date": "2026-11-13",
+    "dayOfWeek": "ศุกร์",
+    "bazi": "Xin (ทอง-) Mao (เถาะ/ไม้)",
+    "taksa": {
+      "sri": "เขียว",
+      "dech": "แดง/ไวน์แดง",
+      "kalakini": "ขาว/ฟ้าอ่อน"
+    },
+    "netScore": 84,
+    "transits": {
+      "Sun": {
+        "deg": 231.1943562351205,
+        "signStr": "พิจิก 21°11'"
+      },
+      "Moon": {
+        "deg": 278.5433263322599,
+        "signStr": "มังกร 8°32'"
+      },
+      "Mercury": {
+        "deg": 215.0346123761392,
+        "signStr": "พิจิก 5°02'"
+      },
+      "Venus": {
+        "deg": 202.86473187546437,
+        "signStr": "ตุลย์ 22°51'"
+      },
+      "Mars": {
+        "deg": 144.67368587003745,
+        "signStr": "สิงห์ 24°40'"
+      },
+      "Jupiter": {
+        "deg": 145.6566520894588,
+        "signStr": "สิงห์ 25°39'"
+      },
+      "Saturn": {
+        "deg": 8.589472335507317,
+        "signStr": "เมษ 8°35'"
+      },
+      "Uranus": {
+        "deg": 64.18912384400664,
+        "signStr": "เมถุน 4°11'"
+      },
+      "Neptune": {
+        "deg": 1.8553941557777922,
+        "signStr": "เมษ 1°51'"
+      },
+      "Pluto": {
+        "deg": 303.259979532507,
+        "signStr": "กุมภ์ 3°15'"
+      }
+    },
+    "aspectsCount": 23,
+    "topAspects": [
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.03
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "MC",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.08
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.18
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.19
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.24
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Sun",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.56
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 84/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 28,
+    "date": "2026-11-14",
+    "dayOfWeek": "เสาร์",
+    "bazi": "Ren (น้ำ+) Chen (มะโรง/ดิน)",
+    "taksa": {
+      "sri": "ดำ/ม่วง",
+      "dech": "ส้มอมน้ำตาล",
+      "kalakini": "ขาว"
+    },
+    "netScore": 61,
+    "transits": {
+      "Sun": {
+        "deg": 232.2011457522624,
+        "signStr": "พิจิก 22°12'"
+      },
+      "Moon": {
+        "deg": 290.34189033163017,
+        "signStr": "มังกร 20°20'"
+      },
+      "Mercury": {
+        "deg": 215.11015669178548,
+        "signStr": "พิจิก 5°06'"
+      },
+      "Venus": {
+        "deg": 202.8670907840985,
+        "signStr": "ตุลย์ 22°52'"
+      },
+      "Mars": {
+        "deg": 145.12865288474254,
+        "signStr": "สิงห์ 25°07'"
+      },
+      "Jupiter": {
+        "deg": 145.74512768841885,
+        "signStr": "สิงห์ 25°44'"
+      },
+      "Saturn": {
+        "deg": 8.543620335536664,
+        "signStr": "เมษ 8°32'"
+      },
+      "Uranus": {
+        "deg": 64.14843160025195,
+        "signStr": "เมถุน 4°08'"
+      },
+      "Neptune": {
+        "deg": 1.839939775900037,
+        "signStr": "เมษ 1°50'"
+      },
+      "Pluto": {
+        "deg": 303.2736108770555,
+        "signStr": "กุมภ์ 3°16'"
+      }
+    },
+    "aspectsCount": 21,
+    "topAspects": [
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.08
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.18
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.19
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.67
+      },
+      {
+        "planet": "Mars",
+        "natalPoint": "Fortune",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.7
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.76
+      }
+    ],
+    "narrative": {
+      "headline": "จังหวะชีวิตดำเนินไปอย่างมั่นคง",
+      "summary": "พลังงานดวงดาวค่อนข้างสมดุล เหมาะกับการสะสางงานประจำวันและฟื้นฟูร่างกาย",
+      "career": "งานเอกสารและงานตามตำแหน่งยังคงดำเนินไปตามปกติ ทำตามหน้าที่อย่างรอบคอบ",
+      "finance": "กระเป๋าเงินนิ่ง ไม่มีรายจ่ายกระทันหัน คุมงบประมาณได้ดี",
+      "emotion": "อารมณ์คงที่ จิตใจสงบ เหมาะกับการพักผ่อนหรืออยู่กับตัวเอง",
+      "warning": "ระวังความเหนื่อยล้าสะสมจากการทำงานติดต่อกัน",
+      "action": "จัดการตารางงานให้เป็นระบบ พักผ่อนให้ตรงเวลา"
+    }
+  },
+  {
+    "dayIndex": 29,
+    "date": "2026-11-15",
+    "dayOfWeek": "อาทิตย์",
+    "bazi": "Gui (น้ำ-) Si (มะเส็ง/ไฟ)",
+    "taksa": {
+      "sri": "แดง",
+      "dech": "ส้ม/ทอง",
+      "kalakini": "ขาว"
+    },
+    "netScore": 81,
+    "transits": {
+      "Sun": {
+        "deg": 233.20831277334617,
+        "signStr": "พิจิก 23°12'"
+      },
+      "Moon": {
+        "deg": 302.1536029816725,
+        "signStr": "กุมภ์ 2°09'"
+      },
+      "Mercury": {
+        "deg": 215.36186581127595,
+        "signStr": "พิจิก 5°21'"
+      },
+      "Venus": {
+        "deg": 202.90930639526215,
+        "signStr": "ตุลย์ 22°54'"
+      },
+      "Mars": {
+        "deg": 145.5793635868508,
+        "signStr": "สิงห์ 25°34'"
+      },
+      "Jupiter": {
+        "deg": 145.83085431980658,
+        "signStr": "สิงห์ 25°49'"
+      },
+      "Saturn": {
+        "deg": 8.499264780475562,
+        "signStr": "เมษ 8°29'"
+      },
+      "Uranus": {
+        "deg": 64.10752270655072,
+        "signStr": "เมถุน 4°06'"
+      },
+      "Neptune": {
+        "deg": 1.8249486408708473,
+        "signStr": "เมษ 1°49'"
+      },
+      "Pluto": {
+        "deg": 303.2876783469008,
+        "signStr": "กุมภ์ 3°17'"
+      }
+    },
+    "aspectsCount": 21,
+    "topAspects": [
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.12
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.16
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.21
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.45
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.69
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.78
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 81/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  },
+  {
+    "dayIndex": 30,
+    "date": "2026-11-16",
+    "dayOfWeek": "จันทร์",
+    "bazi": "Jia (ไม้+) Wu (มะเมีย/ไฟ)",
+    "taksa": {
+      "sri": "ส้ม/ทอง",
+      "dech": "ดำ/เทา",
+      "kalakini": "ขาว"
+    },
+    "netScore": 93,
+    "transits": {
+      "Sun": {
+        "deg": 234.21584062323893,
+        "signStr": "พิจิก 24°12'"
+      },
+      "Moon": {
+        "deg": 314.05814531300757,
+        "signStr": "กุมภ์ 14°03'"
+      },
+      "Mercury": {
+        "deg": 215.7766587863376,
+        "signStr": "พิจิก 5°46'"
+      },
+      "Venus": {
+        "deg": 202.990743286161,
+        "signStr": "ตุลย์ 22°59'"
+      },
+      "Mars": {
+        "deg": 146.02574013632827,
+        "signStr": "สิงห์ 26°01'"
+      },
+      "Jupiter": {
+        "deg": 145.91380315750428,
+        "signStr": "สิงห์ 25°54'"
+      },
+      "Saturn": {
+        "deg": 8.456425065040618,
+        "signStr": "เมษ 8°27'"
+      },
+      "Uranus": {
+        "deg": 64.066412626918,
+        "signStr": "เมถุน 4°03'"
+      },
+      "Neptune": {
+        "deg": 1.810423815573758,
+        "signStr": "เมษ 1°48'"
+      },
+      "Pluto": {
+        "deg": 303.30217517991144,
+        "signStr": "กุมภ์ 3°18'"
+      }
+    },
+    "aspectsCount": 19,
+    "topAspects": [
+      {
+        "planet": "Pluto",
+        "natalPoint": "Vertex",
+        "aspect": "Square (□)",
+        "symbol": "□",
+        "nature": "challenging",
+        "orb": 0.15
+      },
+      {
+        "planet": "Saturn",
+        "natalPoint": "MC",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.16
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Pluto",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.22
+      },
+      {
+        "planet": "Moon",
+        "natalPoint": "Chiron",
+        "aspect": "Trine (△)",
+        "symbol": "△",
+        "nature": "flowing",
+        "orb": 0.54
+      },
+      {
+        "planet": "Pluto",
+        "natalPoint": "Uranus",
+        "aspect": "Conjunction (☌)",
+        "symbol": "☌",
+        "nature": "neutral",
+        "orb": 0.7
+      },
+      {
+        "planet": "Neptune",
+        "natalPoint": "Uranus",
+        "aspect": "Sextile (✱)",
+        "symbol": "✱",
+        "nature": "flowing",
+        "orb": 0.79
+      }
+    ],
+    "narrative": {
+      "headline": "🌟 วันพลังงานหนุนส่ง (Score 93/100)",
+      "summary": "ดาวศุภเคราะห์ทำมุมส่งเสริมอย่างราบรื่น ความคิดและความตั้งใจจะได้รับการสนับสนุน",
+      "career": "การประสานงานราบรื่น ผู้ร่วมงานให้ความร่วมมือดี",
+      "finance": "กระแสเงินสดคล่องตัว มีช่องทางโชคลาภเล็กๆ น้อยๆ",
+      "emotion": "แจ่มใส กระปรี้กระเปร่า มีไฟในการทำงาน",
+      "warning": "รักษาความสม่ำเสมอในการทำงาน",
+      "action": "ติดต่อประสานงานเรื่องสำคัญ เจรจาธุรกิจหรือผลประโยชน์"
+    }
+  }
+]
