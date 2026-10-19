@@ -1,19 +1,19 @@
 {
-  "name": "IAE Astro Dashboard",
-  "short_name": "IAE Astro",
+  "name": "IAE Arcane Observatory",
+  "short_name": "IAE Arcane",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#090D16",
-  "theme_color": "#090D16",
-  "description": "Integrated Astrological Engine — 30-Day Tactical Dashboard",
+  "background_color": "#06080D",
+  "theme_color": "#06080D",
+  "description": "Integrated Astrological Engine — High-Precision Personal Astrological Dashboard",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "./icon.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon.png",
+      "src": "./icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }

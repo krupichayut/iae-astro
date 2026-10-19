@@ -1,7 +1,10 @@
 const fs = require('fs');
 const Astronomy = require('astronomy-engine');
 
-// Natal Constants
+// ============================================================
+// 1. NATAL CONSTANTS (Ground-truth verified from Astro-Seek)
+// ============================================================
+
 const NATAL = {
   Sun:     { name: 'Sun (อาทิตย์)',      deg: 337.98, sign: 'มีน 7°59\'' },
   Moon:    { name: 'Moon (จันทร์)',      deg:  79.70, sign: 'เมถุน 19°42\'' },
@@ -25,6 +28,7 @@ const SIGN_TH = ['เมษ', 'พฤษภ', 'เมถุน', 'กรกฎ',
                  'ตุลย์', 'พิจิก', 'ธนู', 'มังกร', 'กุมภ์', 'มีน'];
 
 const mod360 = d => ((d % 360) + 360) % 360;
+const mod90  = d => ((d % 90) + 90) % 90;
 
 function degToSignStr(deg) {
   deg = mod360(deg);
@@ -38,6 +42,10 @@ function degToSignStr(deg) {
 function shortArc(a, b) {
   const d = Math.abs(a - b);
   return d > 180 ? 360 - d : d;
+}
+
+function calculateMidpoint(a, b) {
+  return Math.abs(a - b) <= 180 ? mod360((a + b) / 2) : mod360((a + b) / 2 + 180);
 }
 
 const MAJOR_ASPECTS = [
@@ -58,18 +66,28 @@ function getBaziDay(targetDate) {
   const baseDate = new Date('2000-01-01T00:00:00Z');
   const diffDays = Math.floor((targetDate - baseDate) / (1000 * 60 * 60 * 24));
   const pIdx = ((54 + diffDays) % 60 + 60) % 60;
-  return `${STEMS[pIdx % 10]} ${BRANCHES[pIdx % 12]}`;
+  return {
+    stem: STEMS[pIdx % 10],
+    branch: BRANCHES[pIdx % 12],
+    raw: `${STEMS[pIdx % 10]} ${BRANCHES[pIdx % 12]}`
+  };
 }
 
-const TAKSA_MAP = {
-  0: { sri: 'แดง', dech: 'ส้ม/ทอง', kalakini: 'ขาว' },
-  1: { sri: 'ส้ม/ทอง', dech: 'ดำ/เทา', kalakini: 'ขาว' },
-  2: { sri: 'ทอง/มัสตาร์ด', dech: 'ม่วงเข้ม/ดำ', kalakini: 'ขาว' },
-  3: { sri: 'ส้มอิฐ', dech: 'เทาควันบุหรี่', kalakini: 'ขาว/ชมพูอ่อน' },
-  4: { sri: 'ส้มสด', dech: 'แดงเลือดหมู', kalakini: 'ขาว' },
-  5: { sri: 'เขียว', dech: 'แดง/ไวน์แดง', kalakini: 'ขาว/ฟ้าอ่อน' },
-  6: { sri: 'ดำ/ม่วง', dech: 'ส้มอมน้ำตาล', kalakini: 'ขาว' }
-};
+// Complete 8-Taksa Spheres for Tuesday-born (เกิดวันอังคาร)
+// 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
+function getThaiTaksaDetailed(dayOfWeek) {
+  // Tuesday base order: อังคาร(บริวาร), พุธ(อายุ), เสาร์(เดช), พฤหัส(ศรี), ราหู(มูละ), ศุกร์(อุตสาหะ), อาทิตย์(มนตรี), จันทร์(กาลกิณี)
+  const TAKSA_PALETTE = {
+    0: { day: 'อาทิตย์', sri: 'แดง', dech: 'ส้ม/ทอง', montri: 'เขียว', kalakini: 'ขาว', moola: 'เทาดำ' },
+    1: { day: 'จันทร์', sri: 'ส้ม/ทอง', dech: 'ดำ/เทา', montri: 'ฟ้า/น้ำเงิน', kalakini: 'ขาว', moola: 'เขียว' },
+    2: { day: 'อังคาร', sri: 'ทอง/มัสตาร์ด', dech: 'ม่วงเข้ม/ดำ', montri: 'แดง', kalakini: 'ขาว', moola: 'ส้ม' },
+    3: { day: 'พุธ', sri: 'ส้มอิฐ', dech: 'เทาควันบุหรี่', montri: 'ขาว/ครีม', kalakini: 'ชมพูอ่อน', moola: 'ดำ' },
+    4: { day: 'พฤหัสบดี', sri: 'ส้มสด', dech: 'แดงเลือดหมู', montri: 'ส้ม', kalakini: 'ขาว', moola: 'ฟ้า' },
+    5: { day: 'ศุกร์', sri: 'เขียว', dech: 'แดง/ไวน์แดง', montri: 'ชมพู', kalakini: 'ขาว/ฟ้าอ่อน', moola: 'เหลือง' },
+    6: { day: 'เสาร์', sri: 'ดำ/ม่วง', dech: 'ส้มอมน้ำตาล', montri: 'น้ำเงิน', kalakini: 'ขาว', moola: 'แดง' }
+  };
+  return TAKSA_PALETTE[dayOfWeek] || TAKSA_PALETTE[2];
+}
 
 const bodies = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
 
@@ -202,7 +220,7 @@ function generateDailyNarrative(item) {
   return { headline, summary, career, finance, emotion, warning, action };
 }
 
-// Generate 30 days starting from today (dynamic)
+// Generate 30 days starting from current date
 const startDate = new Date();
 const daysCount = 30;
 const timeline = [];
@@ -238,6 +256,7 @@ for (let i = 0; i < daysCount; i++) {
           aspects.push({
             planet: tKey,
             natalPoint: nKey,
+            natalName: nData.name,
             aspect: asp.name,
             symbol: asp.symbol,
             nature: asp.nature,
@@ -250,35 +269,962 @@ for (let i = 0; i < daysCount; i++) {
 
   const netScore = Math.max(10, Math.min(95, Math.round(50 + (scoreFlow - scoreChallenge) * 12)));
 
+  // Uranian 90° Dial Midpoints for this day
+  const midpoints = [];
+  const trackedPairs = [
+    ['Sun', 'Moon', 'Sun/Moon (ตัวตนและสมดุลจิตใจ)'],
+    ['Jupiter', 'Venus', 'Jupiter/Venus (โชคลาภและความสุนทรีย์)'],
+    ['Saturn', 'Mars', 'Mars/Saturn (ภาระหน้าที่และการฝ่าฟัน)'],
+    ['MC', 'ASC', 'MC/ASC (สถานะตัวตนในสังคม)']
+  ];
+
+  for (const [p1, p2, label] of trackedPairs) {
+    const mpDeg = calculateMidpoint(NATAL[p1].deg, NATAL[p2].deg);
+    const mp90 = mod90(mpDeg);
+    for (const [tKey, tData] of Object.entries(transits)) {
+      const t90 = mod90(tData.deg);
+      const diff90 = Math.abs(t90 - mp90);
+      const arc90 = diff90 > 45 ? 90 - diff90 : diff90;
+      if (arc90 <= 1.0) {
+        midpoints.push({
+          pair: label,
+          transitPlanet: tKey,
+          transitSign: tData.signStr,
+          orb90: arc90.toFixed(2)
+        });
+      }
+    }
+  }
+
   const dayItem = {
     dayIndex: i + 1,
     date: dateStr,
     dayOfWeek: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'][dayOfWeek],
     bazi: getBaziDay(curDate),
-    taksa: TAKSA_MAP[dayOfWeek],
+    taksa: getThaiTaksaDetailed(dayOfWeek),
     netScore,
     transits,
     aspectsCount: aspects.length,
-    topAspects: aspects.sort((a,b) => a.orb - b.orb).slice(0, 6)
+    topAspects: aspects.sort((a,b) => a.orb - b.orb).slice(0, 8),
+    midpoints
   };
 
   dayItem.narrative = generateDailyNarrative(dayItem);
   timeline.push(dayItem);
 }
 
-// Generate HTML with embedded dynamic data
-const templatePath = 'index.html';
-let html = fs.readFileSync(templatePath, 'utf-8');
+// ============================================================
+// HTML TEMPLATE: Celestial Obsidian & Alchemical Gold UI
+// ============================================================
 
-// Replace data payload inside HTML
-html = html.replace(/const data = \[[\s\S]*?\];\s*let activeIndex = 0;/, `const data = ${JSON.stringify(timeline)};\n    let activeIndex = 0;`);
-
-// Update range badge
 const firstDate = timeline[0].date;
 const lastDate = timeline[timeline.length - 1].date;
-html = html.replace(/<div class="badge" id="current-range-badge">[\s\S]*?<\/div>/, `<div class="badge" id="current-range-badge">${firstDate} – ${lastDate}</div>`);
 
-fs.writeFileSync('index.html', html, 'utf-8');
+const htmlContent = `<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IAE Arcane Observatory — Personal Astrological Engine</title>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#06080D">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="IAE Arcane">
+  <link rel="icon" type="image/png" href="./icon.png">
+  <link rel="apple-touch-icon" href="./icon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-void: #05070B;
+      --bg-surface: #0B0F18;
+      --bg-surface-elevated: #111726;
+      --border-celestial: rgba(229, 184, 105, 0.18);
+      --border-celestial-active: rgba(229, 184, 105, 0.6);
+      --gold-primary: #E5B869;
+      --gold-deep: #C59B46;
+      --gold-glow: rgba(229, 184, 105, 0.15);
+      --text-stellar: #F8FAFC;
+      --text-silver: #94A3B8;
+      --text-muted: #64748B;
+      --accent-indigo: #6366F1;
+      --accent-emerald: #10B981;
+      --accent-amber: #F59E0B;
+      --accent-rose: #F43F5E;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --font-mystic: 'Cinzel', serif;
+      --font-en: 'Plus Jakarta Sans', sans-serif;
+      --font-th: 'Sarabun', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-void);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 100% 50%, rgba(229, 184, 105, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(16, 185, 129, 0.04) 0%, transparent 50%);
+      color: var(--text-stellar);
+      font-family: var(--font-th);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 32px 20px 100px;
+      min-height: 100vh;
+    }
+
+    .container { max-width: 1220px; margin: 0 auto; }
+
+    /* Top Alchemical Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border-celestial);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .sigil-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(229, 184, 105, 0.25) 0%, rgba(11, 15, 24, 0.9) 70%);
+      border: 1px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(229, 184, 105, 0.2);
+    }
+
+    .brand-title {
+      font-family: var(--font-mystic);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold-primary);
+      text-shadow: 0 0 16px rgba(229, 184, 105, 0.3);
+    }
+
+    .brand-sub {
+      font-size: 13px;
+      color: var(--text-silver);
+      letter-spacing: 0.2px;
+    }
+
+    .astronomy-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(11, 15, 24, 0.8);
+      border: 1px solid var(--border-celestial);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-family: var(--font-en);
+    }
+
+    .astronomy-badge .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
+    }
+
+    /* System Tabs Navigation */
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      scrollbar-width: none;
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-celestial);
+      color: var(--text-silver);
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tab-btn:hover {
+      color: var(--gold-primary);
+      border-color: rgba(229, 184, 105, 0.4);
+      background: var(--bg-surface-elevated);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, rgba(229, 184, 105, 0.15) 0%, rgba(11, 15, 24, 0.95) 100%);
+      color: var(--gold-primary);
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 16px rgba(229, 184, 105, 0.2);
+    }
+
+    /* Content Views */
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; animation: fadeIn 0.3s ease; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-celestial);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-family: var(--font-mystic);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Timeline Chart Card */
+    .chart-container {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+    }
+
+    svg.timeline-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .date-scroller {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-top: 18px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--bg-surface-elevated) transparent;
+    }
+
+    .date-chip {
+      flex: 0 0 auto;
+      padding: 8px 14px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .date-chip:hover {
+      border-color: rgba(229, 184, 105, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .date-chip.active {
+      background: rgba(229, 184, 105, 0.15);
+      border-color: var(--gold-primary);
+      color: var(--text-stellar);
+      box-shadow: 0 0 14px rgba(229, 184, 105, 0.25);
+    }
+
+    .date-chip .chip-date {
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .date-chip .chip-score {
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* Day Hero Section */
+    .day-hero {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      padding: 22px;
+      background: linear-gradient(135deg, rgba(229, 184, 105, 0.06) 0%, rgba(11, 15, 24, 0.8) 100%);
+      border: 1px solid var(--border-celestial);
+      border-radius: var(--radius-md);
+      flex-wrap: wrap;
+    }
+
+    .energy-circle {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mystic);
+      font-size: 28px;
+      font-weight: 700;
+      background: rgba(5, 7, 11, 0.9);
+      border: 2px solid var(--gold-primary);
+      color: var(--gold-primary);
+      box-shadow: 0 0 20px rgba(229, 184, 105, 0.25);
+      flex-shrink: 0;
+    }
+
+    .energy-circle small {
+      font-family: var(--font-en);
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    .day-hero-info { flex: 1; min-width: 260px; }
+    .day-hero-info h2 { font-size: 19px; font-weight: 700; color: var(--gold-primary); margin-bottom: 6px; }
+    .day-hero-info p { font-size: 14px; color: var(--text-silver); }
+
+    /* 4 Pillars Grid */
+    .four-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .pillar-card {
+      background: var(--bg-surface-elevated);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .pillar-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--gold-primary);
+    }
+
+    .pillar-content { font-size: 13px; color: var(--text-silver); line-height: 1.55; }
+
+    /* Tactical Action Box */
+    .tactical-box {
+      background: linear-gradient(135deg, rgba(229, 184, 105, 0.08) 0%, rgba(99, 102, 241, 0.05) 100%);
+      border: 1px solid var(--border-celestial);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+
+    .tactical-box h4 {
+      font-family: var(--font-mystic);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold-primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tactical-box p { font-size: 13.5px; color: var(--text-stellar); line-height: 1.6; }
+
+    /* Aspect Grid Table */
+    .aspect-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .aspect-table th {
+      text-align: left;
+      padding: 10px 12px;
+      color: var(--gold-primary);
+      font-family: var(--font-en);
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-celestial);
+    }
+
+    .aspect-table td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-silver);
+    }
+
+    .aspect-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .aspect-tag.flowing {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .aspect-tag.challenging {
+      background: rgba(244, 63, 94, 0.12);
+      color: var(--accent-rose);
+      border: 1px solid rgba(244, 63, 94, 0.25);
+    }
+
+    .aspect-tag.neutral {
+      background: rgba(229, 184, 105, 0.12);
+      color: var(--gold-primary);
+      border: 1px solid rgba(229, 184, 105, 0.25);
+    }
+
+    .orb-val { font-family: var(--font-en); color: var(--text-stellar); font-weight: 600; }
+
+    /* Bazi & Taksa Display Grids */
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .matrix-cell {
+      background: var(--bg-surface-elevated);
+      border: 1px solid rgba(229, 184, 105, 0.15);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-align: center;
+    }
+
+    .matrix-title {
+      font-size: 11px;
+      color: var(--gold-primary);
+      font-family: var(--font-mystic);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .matrix-val { font-size: 16px; font-weight: 700; color: var(--text-stellar); }
+    .matrix-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand-group">
+        <div class="sigil-icon">✧</div>
+        <div>
+          <div class="brand-title">IAE ARCANE OBSERVATORY</div>
+          <div class="brand-sub">ระบบพยากรณ์และวิเคราะห์ดวงชะตาบูรณาการ • พิกัดดาราศาสตร์สากล VSOP87</div>
+        </div>
+      </div>
+      <div class="astronomy-badge">
+        <div class="pulse"></div>
+        <span>LIVE EPHEMERIS ACTIVE</span>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs (5 Systems) -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('macro')"><span>📜</span> ภาพรวม & แนวโน้มดวง</button>
+      <button class="tab-btn" onclick="switchTab('western')"><span>🌌</span> ตะวันตก & ดาวจร</button>
+      <button class="tab-btn" onclick="switchTab('bazi')"><span>🇨🇳</span> ดวงจีน โป๊ยหยี่สี่เถียว</button>
+      <button class="tab-btn" onclick="switchTab('taksa')"><span>🇹🇭</span> ภูมิทักษา & ฮวงจุ้ย</button>
+      <button class="tab-btn" onclick="switchTab('uranian')"><span>⚡</span> ยูเรเนียน 90°</button>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- TAB 1: 📜 MACRO EXECUTIVE SUMMARY & TRENDS (Landing View)     -->
+    <!-- ============================================================ -->
+    <div id="tab-macro" class="tab-pane active">
+      <!-- 30-Day Energy Curve Card -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>📈</span> กราฟแนวโน้มดวงชะตา 30 วันข้างหน้า (Macro Energy Curve)
+          </div>
+          <span style="font-family: var(--font-en); font-size: 12px; color: var(--gold-primary);" id="range-badge">${firstDate} – ${lastDate}</span>
+        </div>
+
+        <div class="chart-container">
+          <svg class="timeline-svg" id="timeline-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E5B869" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#E5B869" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <line x1="0" y1="50" x2="1000" y2="50" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+            <line x1="0" y1="100" x2="1000" y2="100" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+            <line x1="0" y1="150" x2="1000" y2="150" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+            <path id="chart-area" d="" fill="url(#chartGradient)"></path>
+            <path id="chart-line" d="" fill="none" stroke="#E5B869" stroke-width="2.5"></path>
+            <g id="chart-dots"></g>
+          </svg>
+        </div>
+        <div style="font-size: 12px; color: var(--text-muted); text-align: right; margin-top: 8px;">
+          ✦ คลิกเลือกวันที่บนกราฟหรือแถบด้านล่าง เพื่อเปิดบทวิเคราะห์เจาะลึก
+        </div>
+
+        <!-- Date Scroller -->
+        <div class="date-scroller" id="date-scroller"></div>
+      </section>
+
+      <!-- Active Day Macro Analysis Card -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>✦</span> บทวิเคราะห์เจาะลึกประจำวัน: <span id="view-date-title" style="color: var(--text-stellar); margin-left: 6px;">-</span>
+          </div>
+          <div id="day-quality-badge" class="aspect-tag neutral">ปกติ</div>
+        </div>
+
+        <!-- Day Hero -->
+        <div class="day-hero">
+          <div class="energy-circle" id="view-score-circle">
+            <span id="view-score">50</span>
+            <small>SCORE</small>
+          </div>
+          <div class="day-hero-info">
+            <h2 id="view-headline">-</h2>
+            <p id="view-summary">-</p>
+          </div>
+        </div>
+
+        <!-- 4 Pillars Breakdown -->
+        <div class="four-pillars">
+          <div class="pillar-card">
+            <div class="pillar-header"><span>💼</span> การงาน & ภาระหน้าที่</div>
+            <div class="pillar-content" id="view-career">-</div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-header"><span>💰</span> การเงิน & โชคลาภ</div>
+            <div class="pillar-content" id="view-finance">-</div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-header"><span>❤️</span> อารมณ์ & ความสัมพันธ์</div>
+            <div class="pillar-content" id="view-emotion">-</div>
+          </div>
+          <div class="pillar-card" style="border-color: rgba(244, 63, 94, 0.25);">
+            <div class="pillar-header" style="color: var(--accent-rose);"><span>⚠️</span> ข้อควรระวังสูงสุด</div>
+            <div class="pillar-content" id="view-warning">-</div>
+          </div>
+        </div>
+
+        <!-- Tactical Blueprint -->
+        <div class="tactical-box">
+          <h4><span>💡</span> กลยุทธ์การตัดสินใจ & สิ่งที่ควรทำในวันนี้</h4>
+          <p id="view-action">-</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 2: 🌌 WESTERN TRANSITS & EPHEMERIS                       -->
+    <!-- ============================================================ -->
+    <div id="tab-western" class="tab-pane">
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title"><span>🌌</span> ตำแหน่งพิกัดดวงดาวจริง ณ ปัจจุบัน (Astronomical Coordinates)</div>
+        </div>
+        <div class="matrix-grid" id="western-planets-grid">
+          <!-- Dynamic planet cards -->
+        </div>
+
+        <div class="card-header" style="margin-top: 24px;">
+          <div class="card-title"><span>🎯</span> ตารางมุมดาวจรที่สัมพันธ์กับดวงกำเนิด (Active Transit Aspects)</div>
+          <span style="font-size: 12px; color: var(--gold-primary);" id="aspects-count-badge">0 มุมดาว</span>
+        </div>
+        <table class="aspect-table">
+          <thead>
+            <tr>
+              <th>ดาวจร (Transit)</th>
+              <th>ประเภทมุมสัมพันธ์</th>
+              <th>จุดกำเนิดที่ทำมุม (Natal)</th>
+              <th>ระยะวังกะ (Orb)</th>
+            </tr>
+          </thead>
+          <tbody id="aspects-table-body"></tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 3: 🇨🇳 BAZI FOUR PILLARS                                  -->
+    <!-- ============================================================ -->
+    <div id="tab-bazi" class="tab-pane">
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title"><span>🇨🇳</span> แผนผังดวงจีน 4 เสาหลักกำเนิด (Natal Four Pillars)</div>
+        </div>
+        <div class="matrix-grid">
+          <div class="matrix-cell">
+            <div class="matrix-title">เสายามเกิด (Hour Pillar)</div>
+            <div class="matrix-val" style="color: var(--gold-primary);">Xin Wei (辛未)</div>
+            <div class="matrix-sub">ทองหยิน / แพะดิน (ขุมทรัพย์ใต้ดิน)</div>
+          </div>
+          <div class="matrix-cell" style="border-color: var(--gold-primary); box-shadow: 0 0 14px rgba(229,184,105,0.2);">
+            <div class="matrix-title" style="color: var(--accent-emerald);">เสาวันเกิด (Day Master) ★ ตัวตน</div>
+            <div class="matrix-val" style="color: var(--accent-emerald);">Jia Chen (甲辰)</div>
+            <div class="matrix-sub">ไม้ใหญ่เจี่ย นั่งบนมังกรน้ำ (เสาหลักผู้สร้าง)</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="matrix-title">เสาเดือนเกิด (Month Pillar)</div>
+            <div class="matrix-val" style="color: var(--gold-primary);">Geng Yin (庚ขาล)</div>
+            <div class="matrix-sub">ทองหยาง / เสือไม้ (ระเบียบวินัยและเกียรติยศ)</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="matrix-title">เสาปีเกิด (Year Pillar)</div>
+            <div class="matrix-val" style="color: var(--gold-primary);">Bing Zi (丙子)</div>
+            <div class="matrix-sub">ไฟหยาง / ชวดน้ำ (แสงสว่างและปัญญา)</div>
+          </div>
+        </div>
+
+        <div class="tactical-box" style="margin-top: 16px;">
+          <h4><span>🪵</span> การวิเคราะห์ธาตุประจำตัว: ไม้ใหญ่เจี่ย (Jia Wood 甲木)</h4>
+          <p>
+            คุณครูคือ <strong>"ต้นไม้ใหญ่ตระหง่านกลางป่า (The Sacred Oak/Pine)"</strong> มีรากหยั่งลึกลงในมังกรดิน (Chen) ที่อุ้มน้ำ 
+            ธาตุที่ให้คุณสูงสุดคือ <strong>ธาตุไฟ (ความคิดสร้างสรรค์/ความงาม/ดิจิทัล)</strong> เพื่อช่วยให้กิ่งก้านผลิใบงดงาม 
+            และ <strong>ธาตุดิน (อสังหาฯ/ทรัพย์สินคงทน)</strong> เพื่อยึดรากไม้ให้มั่นคงและเปลี่ยนปัญญาเป็นเงินทอง
+          </p>
+        </div>
+
+        <div class="card-header" style="margin-top: 20px;">
+          <div class="card-title"><span>📅</span> พลังงานเสาจรประจำวัน (Current Daily Pillar)</div>
+        </div>
+        <div class="matrix-grid">
+          <div class="matrix-cell">
+            <div class="matrix-title">กิ่งฟ้า (Heavenly Stem)</div>
+            <div class="matrix-val" id="bazi-stem-display">-</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="matrix-title">ก้านดิน (Earthly Branch)</div>
+            <div class="matrix-val" id="bazi-branch-display">-</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="matrix-title">ปฏิกิริยากับดวงเดิม</div>
+            <div class="matrix-val" id="bazi-relation-display" style="font-size: 14px; color: var(--gold-primary);">-</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 4: 🇹🇭 THAI TAKSA & FENG SHUI                             -->
+    <!-- ============================================================ -->
+    <div id="tab-taksa" class="tab-pane">
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title"><span>🇹🇭</span> ภูมิพยากรณ์ทักษาไทย (คนเกิดวันอังคาร)</div>
+        </div>
+        
+        <div class="matrix-grid">
+          <div class="matrix-cell">
+            <div class="matrix-title" style="color: var(--gold-primary);">🌟 ศรี (โชคลาภ/เงินทอง)</div>
+            <div class="matrix-val" id="taksa-sri" style="color: var(--gold-primary);">-</div>
+            <div class="matrix-sub">ใส่กระเป๋าเงิน เคสโทรศัพท์ หรือเสื้อผ้า</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="matrix-title" style="color: var(--accent-indigo);">🛡️ เดช (อำนาจ/เกราะกำบัง)</div>
+            <div class="matrix-val" id="taksa-dech" style="color: var(--accent-indigo);">-</div>
+            <div class="matrix-sub">ช่วยให้คนเกรงใจ ป้องกันคนมาเอาเปรียบ</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="matrix-title" style="color: var(--accent-emerald);">👑 มนตรี (ผู้ใหญ่อุปถัมภ์)</div>
+            <div class="matrix-val" id="taksa-montri" style="color: var(--accent-emerald);">-</div>
+            <div class="matrix-sub">ใช้ในวันเสนองานหรือเข้าพบผู้บริหาร</div>
+          </div>
+          <div class="matrix-cell" style="border-color: rgba(244, 63, 94, 0.3);">
+            <div class="matrix-title" style="color: var(--accent-rose);">❌ กาลกิณี (อุปสรรคต้องห้าม)</div>
+            <div class="matrix-val" id="taksa-kalakini" style="color: var(--accent-rose);">-</div>
+            <div class="matrix-sub">งดใช้ในเครื่องประดับและเสื้อผ้าเด็ดขาด</div>
+          </div>
+        </div>
+
+        <div class="tactical-box" style="margin-top: 16px;">
+          <h4><span>🧭</span> เคล็ดฮวงจุ้ยและทิศมงคล (Eight Mansions Kua 4)</h4>
+          <p>
+            • <strong>ทิศหัวนอน:</strong> ทิศใต้ (เทียนอี้ / หมอเทวดา - เพื่อการนอนหลับลึกและฟื้นฟูจิตใจ) หรือ ทิศตะวันออก (เอี๋ยนเหนียน - เพื่อความสัมพันธ์กลมเกลียว)<br>
+            • <strong>ทิศโต๊ะทำงาน:</strong> หันหน้าสู่ทิศเหนือ 338° (เซิงชี่ - ความก้าวหน้า รุ่งเรือง บารมี)<br>
+            • <strong>การสวมแหวน:</strong> สวมแหวนทองเกลี้ยงหรือนิลดำที่ <strong>"นิ้วกลางมือซ้าย"</strong> เพื่ออุดเงินรั่วและปัดเป่าคนมาเบียดเบียน (งดใส่นิ้วนาง)
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 5: ⚡ URANIAN 90° DIAL                                    -->
+    <!-- ============================================================ -->
+    <div id="tab-uranian" class="tab-pane">
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title"><span>⚡</span> พระเคราะห์สนธิ & จุดสับไกบนจาน 90 องศา (Uranian Midpoints)</div>
+        </div>
+        <div class="tactical-box">
+          <h4><span>🎯</span> กลไกของโหราศาสตร์ยูเรเนียน (Hamburg School)</h4>
+          <p>
+            ยูเรเนียนใช้จานหมุน 90 องศาเพื่อจับคู่ <strong>จุดกึ่งกลาง (Midpoints = A+B/2)</strong> ของดวงดาว 
+            เมื่อมีดาวจรมาสับไก (Trigger) จะส่งผลต่อพฤติกรรมและเหตุการณ์ฉับพลันในระดับสัปดาห์
+          </p>
+        </div>
+
+        <div class="card-header" style="margin-top: 20px;">
+          <div class="card-title"><span>💥</span> จุดสับไกที่กำลังทำงาน ณ ปัจจุบัน</div>
+        </div>
+        <div id="uranian-triggers-container">
+          <!-- Dynamic midpoints -->
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <script>
+    const data = ${JSON.stringify(timeline)};
+    let activeIndex = 0;
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      const targetPane = document.getElementById('tab-' + tabId);
+      if (targetPane) targetPane.classList.add('active');
+      
+      const clickedBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (clickedBtn) clickedBtn.classList.add('active');
+    }
+
+    function renderTimelineChart() {
+      const svgWidth = 1000;
+      const svgHeight = 200;
+      const padding = 20;
+      const count = data.length;
+
+      const points = data.map((d, i) => {
+        const x = padding + (i / (count - 1)) * (svgWidth - padding * 2);
+        const y = svgHeight - padding - (d.netScore / 100) * (svgHeight - padding * 2);
+        return { x, y, score: d.netScore, date: d.date, dayOfWeek: d.dayOfWeek };
+      });
+
+      let linePath = \`M \${points[0].x} \${points[0].y}\`;
+      for (let i = 1; i < points.length; i++) {
+        linePath += \` L \${points[i].x} \${points[i].y}\`;
+      }
+
+      const areaPath = \`\${linePath} L \${points[points.length - 1].x} \${svgHeight - padding} L \${points[0].x} \${svgHeight - padding} Z\`;
+
+      document.getElementById('chart-line').setAttribute('d', linePath);
+      document.getElementById('chart-area').setAttribute('d', areaPath);
+
+      const dotsGroup = document.getElementById('chart-dots');
+      dotsGroup.innerHTML = '';
+      points.forEach((p, idx) => {
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', p.x);
+        circle.setAttribute('cy', p.y);
+        circle.setAttribute('r', idx === activeIndex ? '6.5' : '3.5');
+        circle.setAttribute('fill', p.score >= 70 ? '#10B981' : (p.score <= 45 ? '#F43F5E' : '#E5B869'));
+        circle.setAttribute('stroke', idx === activeIndex ? '#FFFFFF' : '#05070B');
+        circle.setAttribute('stroke-width', idx === activeIndex ? '2.5' : '1.5');
+        circle.style.cursor = 'pointer';
+        circle.addEventListener('click', () => selectDay(idx));
+        dotsGroup.appendChild(circle);
+      });
+    }
+
+    function renderDateChips() {
+      const scroller = document.getElementById('date-scroller');
+      scroller.innerHTML = '';
+      data.forEach((d, idx) => {
+        const chip = document.createElement('div');
+        chip.className = \`date-chip \${idx === activeIndex ? 'active' : ''}\`;
+        const scoreColor = d.netScore >= 70 ? '#10B981' : (d.netScore <= 45 ? '#F43F5E' : '#94A3B8');
+        chip.innerHTML = \`
+          <div class="chip-date">\${d.date.slice(5)}</div>
+          <div class="chip-score" style="color: \${scoreColor};">\${d.netScore}</div>
+        \`;
+        chip.addEventListener('click', () => selectDay(idx));
+        scroller.appendChild(chip);
+      });
+    }
+
+    function selectDay(index) {
+      activeIndex = index;
+      renderTimelineChart();
+      renderDateChips();
+      updateAllTabs();
+    }
+
+    function updateAllTabs() {
+      const cur = data[activeIndex];
+      const n = cur.narrative || {};
+
+      // 1. Macro Tab
+      document.getElementById('view-date-title').textContent = \`\${cur.date} (\${cur.dayOfWeek})\`;
+      document.getElementById('view-score').textContent = cur.netScore;
+      
+      const circle = document.getElementById('view-score-circle');
+      const badge = document.getElementById('day-quality-badge');
+      if (cur.netScore >= 70) {
+        circle.style.borderColor = 'var(--accent-emerald)';
+        circle.style.color = 'var(--accent-emerald)';
+        badge.className = 'aspect-tag flowing';
+        badge.textContent = '🌟 จังหวะเปิด (Golden Day)';
+      } else if (cur.netScore <= 45) {
+        circle.style.borderColor = 'var(--accent-rose)';
+        circle.style.color = 'var(--accent-rose)';
+        badge.className = 'aspect-tag challenging';
+        badge.textContent = '⚠️ เฝ้าระวัง (Caution Day)';
+      } else {
+        circle.style.borderColor = 'var(--gold-primary)';
+        circle.style.color = 'var(--gold-primary)';
+        badge.className = 'aspect-tag neutral';
+        badge.textContent = '⚡ วันดำเนินงานปกติ';
+      }
+
+      document.getElementById('view-headline').textContent = n.headline || 'จังหวะชีวิตดำเนินไปอย่างมั่นคง';
+      document.getElementById('view-summary').textContent = n.summary || 'คำนวณจากมุมสัมพันธ์ของดวงดาวจรและธาตุกำเนิด';
+      document.getElementById('view-career').textContent = n.career || '-';
+      document.getElementById('view-finance').textContent = n.finance || '-';
+      document.getElementById('view-emotion').textContent = n.emotion || '-';
+      document.getElementById('view-warning').textContent = n.warning || '-';
+      document.getElementById('view-action').textContent = n.action || '-';
+
+      // 2. Western Tab
+      document.getElementById('aspects-count-badge').textContent = \`\${cur.aspectsCount} มุมดาวที่สัมพันธ์\`;
+      const tbody = document.getElementById('aspects-table-body');
+      tbody.innerHTML = '';
+      cur.topAspects.forEach(a => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = \`
+          <td><strong>\${a.planet}</strong></td>
+          <td><span class="aspect-tag \${a.nature}">\${a.symbol} \${a.aspect}</span></td>
+          <td>\${a.natalName || a.natalPoint}</td>
+          <td><span class="orb-val">\${a.orb.toFixed(2)}°</span></td>
+        \`;
+        tbody.appendChild(tr);
+      });
+
+      const pGrid = document.getElementById('western-planets-grid');
+      pGrid.innerHTML = '';
+      for (const [p, d] of Object.entries(cur.transits)) {
+        const cell = document.createElement('div');
+        cell.className = 'matrix-cell';
+        cell.innerHTML = \`
+          <div class="matrix-title">\${p}</div>
+          <div class="matrix-val">\${d.signStr}</div>
+        \`;
+        pGrid.appendChild(cell);
+      }
+
+      // 3. Bazi Tab
+      document.getElementById('bazi-stem-display').textContent = cur.bazi.stem;
+      document.getElementById('bazi-branch-display').textContent = cur.bazi.branch;
+      document.getElementById('bazi-relation-display').textContent = cur.bazi.raw;
+
+      // 4. Taksa Tab
+      document.getElementById('taksa-sri').textContent = cur.taksa.sri;
+      document.getElementById('taksa-dech').textContent = cur.taksa.dech;
+      document.getElementById('taksa-montri').textContent = cur.taksa.montri;
+      document.getElementById('taksa-kalakini').textContent = cur.taksa.kalakini;
+
+      // 5. Uranian Tab
+      const uContainer = document.getElementById('uranian-triggers-container');
+      uContainer.innerHTML = '';
+      if (cur.midpoints && cur.midpoints.length > 0) {
+        cur.midpoints.forEach(m => {
+          const div = document.createElement('div');
+          div.className = 'matrix-cell';
+          div.style.textAlign = 'left';
+          div.style.marginBottom = '12px';
+          div.innerHTML = \`
+            <div style="font-weight: 700; color: var(--gold-primary); font-size: 14px;">💥 \${m.pair}</div>
+            <div style="font-size: 13px; color: var(--text-silver); margin-top: 4px;">
+              ดาวจร <strong>\${m.transitPlanet}</strong> (\${m.transitSign}) สับไกบนจาน 90° | ระยะวังกะ (Orb): <span class="orb-val">\${m.orb90}°</span>
+            </div>
+          \`;
+          uContainer.appendChild(div);
+        });
+      } else {
+        uContainer.innerHTML = \`
+          <div style="padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px;">
+            ✦ ไม่มีจุดสับไกยูเรเนียนระยะประชิด (Orb < 1.0°) ในวันนี้ พลังงานภายนอกดำเนินไปตามปกติ
+          </div>
+        \`;
+      }
+    }
+
+    // Initialize
+    renderTimelineChart();
+    renderDateChips();
+    updateAllTabs();
+  </script>
+</body>
+</html>
+`;
+
+// Save generated files
+fs.writeFileSync('index.html', htmlContent, 'utf-8');
 fs.writeFileSync('timeline_data.json', JSON.stringify(timeline, null, 2), 'utf-8');
 
-console.log(`[Auto-Generate] Success! Rolling 30-day window: ${firstDate} to ${lastDate}`);
+// Also update local artifact dashboard so user can preview directly
+const artifactDashboardPath = 'C:/Users/UNS_CT/.gemini/antigravity/brain/b3fc2399-9925-4d4c-bb9e-64f29755c607/iae_dashboard.html';
+fs.writeFileSync(artifactDashboardPath, htmlContent, 'utf-8');
+
+console.log(`[Auto-Generate] IAE Arcane Observatory v3.0 successfully generated for ${firstDate} to ${lastDate}`);
