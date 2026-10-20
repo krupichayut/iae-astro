@@ -330,6 +330,7 @@ const htmlContent = `<!DOCTYPE html>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="IAE Arcane">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✧</text></svg>">
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="icon" type="image/png" href="./icon.png">
   <link rel="apple-touch-icon" href="./icon.png">
@@ -2285,8 +2286,31 @@ const htmlContent = `<!DOCTYPE html>
   <!-- Hidden Container for High-Fidelity Vector Print & PDF Export -->
   <div id="print-dossier" class="theme-obsidian"></div>
 
-  <!-- Hidden Off-screen Container for High-DPI Image Capture -->
-  <div id="image-capture-container" style="position: fixed; left: -9999px; top: 0; width: 680px; z-index: -100; pointer-events: none;"></div>
+  <!-- Hidden Staging Wrapper for High-DPI Image Capture (positioned behind everything at 0, 0) -->
+  <div id="image-export-stage" style="position: fixed; left: 0; top: 0; width: 680px; z-index: -99999; pointer-events: none; opacity: 1;"></div>
+
+  <!-- Image Preview Modal -->
+  <div id="image-preview-modal" class="modal-overlay">
+    <div class="modal-box" style="max-width: 640px; text-align: center; padding: 22px;">
+      <div class="modal-header" style="border: none; padding-bottom: 4px; margin-bottom: 10px;">
+        <h3 style="font-size: 17px; color: var(--gold-primary);">✦ แฟ้มภาพการ์ดดวงชะตา (Destiny Card) ✦</h3>
+        <p style="font-size: 12px; color: var(--text-silver);">ระบบได้เริ่มดาวน์โหลดไฟล์ภาพอัตโนมัติแล้ว</p>
+      </div>
+      <div id="image-preview-content" style="max-height: 60vh; overflow-y: auto; border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--border-celestial); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+      </div>
+      <p style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 14px;">
+        💡 สำหรับมือถือ / iPhone: หากไฟล์ไม่ดาวน์โหลด สามารถแตะค้างที่รูปภาพด้านบน แล้วเลือก <strong>"บันทึกรูปภาพ" (Save Image)</strong> ได้ทันทีครับ
+      </p>
+      <div style="display: flex; gap: 10px;">
+        <button class="modal-btn-confirm" id="btn-re-download" style="flex: 2; padding: 10px;">
+          <span>📥</span> ดาวน์โหลดอีกครั้ง
+        </button>
+        <button class="modal-btn-cancel" onclick="closeImagePreviewModal()" style="flex: 1; padding: 10px;">
+          ✕ ปิด
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script>
     const data = ${JSON.stringify(timeline)};
@@ -2550,13 +2574,18 @@ const htmlContent = `<!DOCTYPE html>
       const originalText = quickBtn ? quickBtn.innerHTML : '';
       if (quickBtn) quickBtn.innerHTML = '<span>⏳</span> กำลังสร้างรูป...';
 
-      const container = document.getElementById('image-capture-container');
-      container.className = \`image-capture-card theme-\${theme}\`;
+      const stage = document.getElementById('image-export-stage');
+      stage.innerHTML = '';
+
+      const card = document.createElement('div');
+      card.className = \`image-capture-card theme-\${theme}\`;
+      card.style.width = '680px';
+      card.style.position = 'relative';
 
       const statusText = cur.netScore >= 70 ? '🌟 GOLDEN DAY (จังหวะเปิด)' : (cur.netScore <= 45 ? '⚠️ CAUTION DAY (เฝ้าระวัง)' : '⚡ NEUTRAL (ดำเนินงานปกติ)');
       const scoreColor = cur.netScore >= 70 ? '#10B981' : (cur.netScore <= 45 ? '#F43F5E' : (theme === 'obsidian' ? '#E5B869' : '#B45309'));
 
-      container.innerHTML = \`
+      card.innerHTML = \`
         <div class="icc-header-row">
           <div class="icc-brand-wrap">
             <div class="icc-sigil">✧</div>
@@ -2622,6 +2651,8 @@ const htmlContent = `<!DOCTYPE html>
         </div>
       \`;
 
+      stage.appendChild(card);
+
       setTimeout(() => {
         if (typeof htmlToImage === 'undefined') {
           alert('กำลังโหลดโมดูลรูปภาพ กรุณาลองใหม่อีกครั้ง');
@@ -2629,25 +2660,29 @@ const htmlContent = `<!DOCTYPE html>
           return;
         }
 
-        htmlToImage.toPng(container, {
+        htmlToImage.toPng(card, {
           pixelRatio: 2,
           cacheBust: true,
           backgroundColor: theme === 'obsidian' ? '#06080F' : '#FFFFFF'
         })
         .then(dataUrl => {
+          const filename = \`IAE-Destiny-\${cur.date}.png\`;
           const a = document.createElement('a');
-          a.download = \`IAE-Destiny-\${cur.date}.png\`;
+          a.download = filename;
           a.href = dataUrl;
           a.click();
           if (quickBtn) {
             quickBtn.innerHTML = '<span>✅</span> สำเร็จ!';
             setTimeout(() => { quickBtn.innerHTML = originalText; }, 2000);
           }
+          stage.innerHTML = '';
+          showImagePreviewModal(dataUrl, filename);
         })
         .catch(err => {
           console.error('Image export failed:', err);
           alert('เกิดข้อผิดพลาดในการสร้างรูปภาพ กรุณาลองใหม่อีกครั้ง');
           if (quickBtn) quickBtn.innerHTML = originalText;
+          stage.innerHTML = '';
         });
       }, 150);
     }
@@ -2661,8 +2696,13 @@ const htmlContent = `<!DOCTYPE html>
       const endDateStr = formatThaiDateLong(days[days.length - 1].date);
       const avgScore = Math.round(days.reduce((acc, d) => acc + d.netScore, 0) / days.length);
 
-      const container = document.getElementById('image-capture-container');
-      container.className = \`image-capture-card theme-\${theme}\`;
+      const stage = document.getElementById('image-export-stage');
+      stage.innerHTML = '';
+
+      const card = document.createElement('div');
+      card.className = \`image-capture-card theme-\${theme}\`;
+      card.style.width = '680px';
+      card.style.position = 'relative';
 
       let itemsHtml = '';
       days.forEach(d => {
@@ -2688,7 +2728,7 @@ const htmlContent = `<!DOCTYPE html>
         \`;
       });
 
-      container.innerHTML = \`
+      card.innerHTML = \`
         <div class="icc-header-row">
           <div class="icc-brand-wrap">
             <div class="icc-sigil">✧</div>
@@ -2717,28 +2757,57 @@ const htmlContent = `<!DOCTYPE html>
         </div>
       \`;
 
+      stage.appendChild(card);
+
       setTimeout(() => {
         if (typeof htmlToImage === 'undefined') {
           alert('กำลังโหลดโมดูลรูปภาพ กรุณาลองใหม่อีกครั้ง');
           return;
         }
 
-        htmlToImage.toPng(container, {
+        htmlToImage.toPng(card, {
           pixelRatio: 2,
           cacheBust: true,
           backgroundColor: theme === 'obsidian' ? '#06080F' : '#FFFFFF'
         })
         .then(dataUrl => {
+          const filename = \`IAE-7Day-Strategy-\${days[0].date}.png\`;
           const a = document.createElement('a');
-          a.download = \`IAE-7Day-Strategy-\${days[0].date}.png\`;
+          a.download = filename;
           a.href = dataUrl;
           a.click();
+          stage.innerHTML = '';
+          showImagePreviewModal(dataUrl, filename);
         })
         .catch(err => {
           console.error('7-Day image export failed:', err);
           alert('เกิดข้อผิดพลาดในการสร้างรูปภาพ กรุณาลองใหม่อีกครั้ง');
+          stage.innerHTML = '';
         });
       }, 150);
+    }
+
+    function showImagePreviewModal(dataUrl, filename) {
+      const modal = document.getElementById('image-preview-modal');
+      const content = document.getElementById('image-preview-content');
+      const reDownloadBtn = document.getElementById('btn-re-download');
+      if (!modal || !content) return;
+
+      content.innerHTML = \`<img src="\${dataUrl}" alt="IAE Card Preview" style="width: 100%; display: block; border-radius: 8px;">\`;
+      if (reDownloadBtn) {
+        reDownloadBtn.onclick = () => {
+          const a = document.createElement('a');
+          a.download = filename;
+          a.href = dataUrl;
+          a.click();
+        };
+      }
+      modal.classList.add('active');
+    }
+
+    function closeImagePreviewModal() {
+      const modal = document.getElementById('image-preview-modal');
+      if (modal) modal.classList.remove('active');
     }
 
     function formatThaiDateLong(dateStr) {
@@ -2920,10 +2989,15 @@ const htmlContent = `<!DOCTYPE html>
     document.addEventListener('click', (e) => {
       const modal = document.getElementById('export-modal');
       if (e.target === modal) closeExportModal();
+      const imgModal = document.getElementById('image-preview-modal');
+      if (e.target === imgModal) closeImagePreviewModal();
     });
 
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeExportModal();
+      if (e.key === 'Escape') {
+        closeExportModal();
+        closeImagePreviewModal();
+      }
     });
 
     // Initialize
