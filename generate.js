@@ -338,6 +338,9 @@ const htmlContent = `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- HTML to Image CDN for High-DPI Social Card Export -->
+  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+
   <style>
     :root {
       --bg-void: #05070B;
@@ -1532,6 +1535,284 @@ const htmlContent = `<!DOCTYPE html>
       font-size: 9.5px;
       opacity: 0.6;
     }
+
+    /* Quick Action Image Button on Daily Card */
+    .card-quick-img-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(229, 184, 105, 0.12);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-family: var(--font-th);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card-quick-img-btn:hover {
+      background: rgba(229, 184, 105, 0.25);
+      box-shadow: 0 0 12px rgba(229, 184, 105, 0.3);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================ */
+    /* IMAGE EXPORT STYLES (High-DPI Social Card Layout)             */
+    /* ============================================================ */
+    .image-capture-card {
+      width: 680px;
+      border-radius: 18px;
+      padding: 30px 28px;
+      box-sizing: border-box;
+      font-family: var(--font-th);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Theme: Celestial Obsidian (Image) */
+    .image-capture-card.theme-obsidian {
+      background: #06080F;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 100% 50%, rgba(229, 184, 105, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      border: 2px solid #E5B869;
+      color: #F8FAFC;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+    }
+
+    .image-capture-card.theme-obsidian .icc-brand-title {
+      color: #E5B869;
+      font-family: var(--font-mystic);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .image-capture-card.theme-obsidian .icc-score-circle {
+      border: 3px solid #E5B869;
+      background: radial-gradient(circle, rgba(229, 184, 105, 0.2) 0%, #0B101D 70%);
+      color: #E5B869;
+    }
+
+    .image-capture-card.theme-obsidian .icc-pillar-card {
+      background: #0B101D;
+      border: 1px solid rgba(229, 184, 105, 0.25);
+    }
+
+    .image-capture-card.theme-obsidian .icc-pillar-title {
+      color: #E5B869;
+    }
+
+    .image-capture-card.theme-obsidian .icc-tactical-box {
+      background: rgba(229, 184, 105, 0.08);
+      border: 1px solid rgba(229, 184, 105, 0.3);
+    }
+
+    /* Theme: Minimalist Ivory (Image) */
+    .image-capture-card.theme-ivory {
+      background: #FFFFFF;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.06) 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.04) 0%, transparent 50%);
+      border: 2px solid #92400E;
+      color: #0F172A;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-capture-card.theme-ivory .icc-brand-title {
+      color: #92400E;
+      font-family: var(--font-mystic);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .image-capture-card.theme-ivory .icc-score-circle {
+      border: 3px solid #B45309;
+      background: #FFFBEB;
+      color: #92400E;
+    }
+
+    .image-capture-card.theme-ivory .icc-pillar-card {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+    }
+
+    .image-capture-card.theme-ivory .icc-pillar-title {
+      color: #92400E;
+    }
+
+    .image-capture-card.theme-ivory .icc-tactical-box {
+      background: #FFFBEB;
+      border: 1px solid #FCD34D;
+      color: #78350F;
+    }
+
+    /* Card Elements */
+    .icc-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(229, 184, 105, 0.3);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .theme-ivory .icc-header-row {
+      border-bottom-color: #CBD5E1;
+    }
+
+    .icc-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .icc-sigil {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid #E5B869;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #E5B869;
+      background: rgba(229, 184, 105, 0.15);
+    }
+
+    .theme-ivory .icc-sigil {
+      border-color: #B45309;
+      color: #92400E;
+      background: #FEF3C7;
+    }
+
+    .icc-sub-brand {
+      font-size: 10.5px;
+      opacity: 0.75;
+    }
+
+    .icc-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-family: var(--font-en);
+    }
+
+    .icc-hero-section {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .icc-score-circle {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icc-score-val {
+      font-size: 30px;
+      font-weight: 800;
+      font-family: var(--font-en);
+      line-height: 1;
+    }
+
+    .icc-score-lbl {
+      font-size: 8.5px;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      margin-top: 2px;
+    }
+
+    .icc-hero-info {
+      flex: 1;
+    }
+
+    .icc-hero-date {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #E5B869;
+      font-family: var(--font-en);
+      margin-bottom: 2px;
+    }
+
+    .theme-ivory .icc-hero-date {
+      color: #92400E;
+    }
+
+    .icc-hero-headline {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
+    .icc-hero-summary {
+      font-size: 11.5px;
+      opacity: 0.85;
+      line-height: 1.45;
+    }
+
+    .icc-pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .icc-pillar-card {
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .icc-pillar-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .icc-pillar-desc {
+      font-size: 10.5px;
+      line-height: 1.45;
+      opacity: 0.9;
+    }
+
+    .icc-tactical-box {
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .icc-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(229, 184, 105, 0.3);
+      padding-top: 10px;
+      font-size: 9.5px;
+      opacity: 0.75;
+    }
+
+    .theme-ivory .icc-footer-row {
+      border-top-color: #CBD5E1;
+    }
   </style>
 </head>
 <body>
@@ -1547,8 +1828,8 @@ const htmlContent = `<!DOCTYPE html>
         </div>
       </div>
       <div class="header-actions">
-        <button class="export-btn" onclick="openExportModal()" title="ส่งออกดวงชะตาเป็นแฟ้มเอกสาร PDF">
-          <span>📜</span> ส่งออก PDF (7 วัน / รายเดือน)
+        <button class="export-btn" onclick="openExportModal()" title="ส่งออกดวงชะตาเป็น PDF หรือ รูปภาพความละเอียดสูง">
+          <span>📜</span> ส่งออกรายงาน (PDF / รูปภาพ)
         </button>
         <div class="astronomy-badge">
           <div class="pulse"></div>
@@ -1618,7 +1899,12 @@ const htmlContent = `<!DOCTYPE html>
           <div class="card-title">
             <span>✦</span> บทวิเคราะห์เจาะลึกประจำวัน: <span id="view-date-title" style="color: var(--text-stellar); margin-left: 6px;">-</span>
           </div>
-          <div id="day-quality-badge" class="aspect-tag neutral">ปกติ</div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <button class="card-quick-img-btn" id="btn-quick-img" onclick="exportDailyImage()" title="บันทึกการ์ดดวงวันนี้เป็นรูปภาพความละเอียดสูง (PNG)">
+              <span>📸</span> บันทึกรูปการ์ด
+            </button>
+            <div id="day-quality-badge" class="aspect-tag neutral">ปกติ</div>
+          </div>
         </div>
 
         <!-- Day Hero -->
@@ -1933,45 +2219,62 @@ const htmlContent = `<!DOCTYPE html>
 
   </div>
 
-  <!-- Export PDF Modal -->
+  <!-- Export Modal (PDF & Image) -->
   <div id="export-modal" class="modal-overlay">
     <div class="modal-box">
       <div class="modal-header">
         <div class="sigil-icon" style="margin: 0 auto 10px; width: 40px; height: 40px; font-size: 18px;">✧</div>
         <h3>IMPERIAL ASTROLOGICAL DOSSIER</h3>
-        <p>ส่งออกแฟ้มรายงานดวงชะตาเป็น PDF คุณภาพสูง (High-Fidelity Vector Print)</p>
+        <p>ส่งออกแฟ้มรายงานดวงชะตาเป็น PDF หรือ รูปภาพความละเอียดสูง (2x Retina)</p>
       </div>
 
+      <!-- Format Selector -->
       <div class="modal-section">
-        <div class="modal-section-title"><span>⏳</span> เลือกระยะเวลาการพยากรณ์</div>
+        <div class="modal-section-title"><span>📂</span> เลือกรูปแบบไฟล์ (Export Format)</div>
         <div class="option-cards">
-          <div class="option-card selected" id="opt-scope-7" onclick="selectExportScope(7)">
-            <h4><span>⚡</span> ยุทธศาสตร์ 7 วัน</h4>
-            <p>เน้นยุทธศาสตร์เชิงรุกรายวัน เจาะลึก 4 เสาหลัก ฤกษ์เวลาทอง และข้อควรระวัง</p>
+          <div class="option-card selected" id="opt-fmt-pdf" onclick="selectExportFormat('pdf')">
+            <h4><span>📄</span> เอกสาร PDF</h4>
+            <p>พิมพ์/บันทึกเป็นเอกสาร A4 คมชัดแบบ Vector สำหรับอ่านละเอียดหรือพรินต์</p>
           </div>
-          <div class="option-card" id="opt-scope-30" onclick="selectExportScope(30)">
-            <h4><span>🌙</span> มหาภาครายเดือน 30 วัน</h4>
-            <p>วิเคราะห์ภาพรวมแนวโน้ม 30 วัน สถิติพลังงาน และปฏิทินพลังงานครบวงจร</p>
+          <div class="option-card" id="opt-fmt-image" onclick="selectExportFormat('image')">
+            <h4><span>🖼️</span> รูปภาพการ์ด PNG</h4>
+            <p>ส่งออกเป็นการ์ดภาพความละเอียดสูง 2x Retina เหมาะสำหรับแชร์ลง LINE / IG / โซเชียล</p>
           </div>
         </div>
       </div>
 
+      <!-- Scope Selector -->
       <div class="modal-section">
-        <div class="modal-section-title"><span>🎨</span> เลือกธีมของเอกสาร PDF</div>
+        <div class="modal-section-title"><span>⏳</span> เลือกระยะเวลาการพยากรณ์</div>
+        <div class="option-cards">
+          <div class="option-card selected" id="opt-scope-7" onclick="selectExportScope(7)">
+            <h4 id="lbl-scope-7"><span>⚡</span> ยุทธศาสตร์ 7 วัน</h4>
+            <p id="desc-scope-7">เน้นยุทธศาสตร์เชิงรุกรายวัน เจาะลึก 4 เสาหลัก ฤกษ์เวลาทอง และข้อควรระวัง</p>
+          </div>
+          <div class="option-card" id="opt-scope-30" onclick="selectExportScope(30)">
+            <h4 id="lbl-scope-30"><span>🌙</span> มหาภาครายเดือน 30 วัน</h4>
+            <p id="desc-scope-30">วิเคราะห์ภาพรวมแนวโน้ม 30 วัน สถิติพลังงาน และปฏิทินพลังงานครบวงจร</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Theme Selector -->
+      <div class="modal-section">
+        <div class="modal-section-title"><span>🎨</span> เลือกธีมของเอกสาร / รูปภาพ</div>
         <div class="option-cards">
           <div class="option-card selected" id="opt-theme-obsidian" onclick="selectExportTheme('obsidian')">
             <h4><span>🌌</span> Celestial Obsidian</h4>
-            <p>พื้นหลังดำสนิท ขอบทองคำ ตัวหนังสือเงิน/ทอง ลึกลับ หรูหรา เหมาะสำหรับ iPad/แท็บเล็ต</p>
+            <p>พื้นหลังดำสนิท ขอบทองคำ ตัวหนังสือเงิน/ทอง ลึกลับ หรูหรา สไตล์พรีเมียม</p>
           </div>
           <div class="option-card" id="opt-theme-ivory" onclick="selectExportTheme('ivory')">
             <h4><span>📜</span> Minimalist Ivory</h4>
-            <p>พื้นขาวงาช้าง ลายเส้นทองและเทา คมชัด สะอาดตา ประหยัดหมึกสำหรับสั่งพิมพ์กระดาษ A4</p>
+            <p>พื้นขาวงาช้าง ลายเส้นทองและเทา คมชัด สะอาดตา ประหยัดหมึกพิมพ์</p>
           </div>
         </div>
       </div>
 
       <div class="modal-actions">
-        <button class="modal-btn-confirm" onclick="executeExportPDF()">
+        <button class="modal-btn-confirm" id="modal-submit-btn" onclick="executeExport()">
           <span>✨</span> สร้างและสั่งพิมพ์ / บันทึก PDF
         </button>
         <button class="modal-btn-cancel" onclick="closeExportModal()">ยกเลิก</button>
@@ -1981,6 +2284,9 @@ const htmlContent = `<!DOCTYPE html>
 
   <!-- Hidden Container for High-Fidelity Vector Print & PDF Export -->
   <div id="print-dossier" class="theme-obsidian"></div>
+
+  <!-- Hidden Off-screen Container for High-DPI Image Capture -->
+  <div id="image-capture-container" style="position: fixed; left: -9999px; top: 0; width: 680px; z-index: -100; pointer-events: none;"></div>
 
   <script>
     const data = ${JSON.stringify(timeline)};
@@ -2164,6 +2470,7 @@ const htmlContent = `<!DOCTYPE html>
     // ============================================================
     let exportScope = 7;
     let exportTheme = 'obsidian';
+    let exportFormat = 'pdf'; // 'pdf' or 'image'
 
     function openExportModal() {
       document.getElementById('export-modal').classList.add('active');
@@ -2171,6 +2478,32 @@ const htmlContent = `<!DOCTYPE html>
 
     function closeExportModal() {
       document.getElementById('export-modal').classList.remove('active');
+    }
+
+    function selectExportFormat(fmt) {
+      exportFormat = fmt;
+      document.getElementById('opt-fmt-pdf').classList.toggle('selected', fmt === 'pdf');
+      document.getElementById('opt-fmt-image').classList.toggle('selected', fmt === 'image');
+      
+      const submitBtn = document.getElementById('modal-submit-btn');
+      const lblScope7 = document.getElementById('lbl-scope-7');
+      const descScope7 = document.getElementById('desc-scope-7');
+      const lblScope30 = document.getElementById('lbl-scope-30');
+      const descScope30 = document.getElementById('desc-scope-30');
+
+      if (fmt === 'pdf') {
+        submitBtn.innerHTML = '<span>✨</span> สร้างและสั่งพิมพ์ / บันทึก PDF';
+        lblScope7.innerHTML = '<span>⚡</span> ยุทธศาสตร์ 7 วัน';
+        descScope7.textContent = 'เน้นยุทธศาสตร์เชิงรุกรายวัน เจาะลึก 4 เสาหลัก ฤกษ์เวลาทอง และข้อควรระวัง';
+        lblScope30.innerHTML = '<span>🌙</span> มหาภาครายเดือน 30 วัน';
+        descScope30.textContent = 'วิเคราะห์ภาพรวมแนวโน้ม 30 วัน สถิติพลังงาน และปฏิทินพลังงานครบวงจร';
+      } else {
+        submitBtn.innerHTML = '<span>📸</span> ดาวน์โหลดรูปภาพ PNG (High-DPI)';
+        lblScope7.innerHTML = '<span>⚡</span> ภาพการ์ดดวงรายวัน (Daily Card)';
+        descScope7.textContent = 'ส่งออกภาพการ์ดดวงวันที่เลือก สวยคมชัดระดับ 2x Retina เหมาะแชร์ลง LINE / IG';
+        lblScope30.innerHTML = '<span>🌙</span> ภาพแผ่นยุทธศาสตร์ 7 วัน (7-Day Sheet)';
+        descScope30.textContent = 'สรุปแนวโน้มและคะแนนดวงดาว 7 วันล่วงหน้าในแผ่นภาพเดียว';
+      }
     }
 
     function selectExportScope(scope) {
@@ -2185,12 +2518,227 @@ const htmlContent = `<!DOCTYPE html>
       document.getElementById('opt-theme-ivory').classList.toggle('selected', theme === 'ivory');
     }
 
+    function executeExport() {
+      if (exportFormat === 'pdf') {
+        executeExportPDF();
+      } else {
+        closeExportModal();
+        if (exportScope === 7) {
+          exportDailyImage(activeIndex, exportTheme);
+        } else {
+          export7DayImage(activeIndex, exportTheme);
+        }
+      }
+    }
+
     function executeExportPDF() {
       closeExportModal();
       renderPrintDossier(exportScope, exportTheme);
       setTimeout(() => {
         window.print();
       }, 350);
+    }
+
+    function exportDailyImage(dateIdx, themeOverride) {
+      const idx = (typeof dateIdx === 'number') ? dateIdx : activeIndex;
+      const theme = themeOverride || exportTheme || 'obsidian';
+      const cur = data[idx];
+      const n = cur.narrative || {};
+      const t = cur.taksa || {};
+
+      const quickBtn = document.getElementById('btn-quick-img');
+      const originalText = quickBtn ? quickBtn.innerHTML : '';
+      if (quickBtn) quickBtn.innerHTML = '<span>⏳</span> กำลังสร้างรูป...';
+
+      const container = document.getElementById('image-capture-container');
+      container.className = \`image-capture-card theme-\${theme}\`;
+
+      const statusText = cur.netScore >= 70 ? '🌟 GOLDEN DAY (จังหวะเปิด)' : (cur.netScore <= 45 ? '⚠️ CAUTION DAY (เฝ้าระวัง)' : '⚡ NEUTRAL (ดำเนินงานปกติ)');
+      const scoreColor = cur.netScore >= 70 ? '#10B981' : (cur.netScore <= 45 ? '#F43F5E' : (theme === 'obsidian' ? '#E5B869' : '#B45309'));
+
+      container.innerHTML = \`
+        <div class="icc-header-row">
+          <div class="icc-brand-wrap">
+            <div class="icc-sigil">✧</div>
+            <div>
+              <div class="icc-brand-title">IAE ARCANE OBSERVATORY</div>
+              <div class="icc-sub-brand">ระบบสังเคราะห์ดวงชะตาบูรณาการ • พิกัดดาราศาสตร์สากล VSOP87</div>
+            </div>
+          </div>
+          <div class="icc-badge" style="background: \${cur.netScore >= 70 ? 'rgba(16, 185, 129, 0.2)' : (cur.netScore <= 45 ? 'rgba(244, 63, 94, 0.2)' : 'rgba(229, 184, 105, 0.2)')}; color: \${scoreColor}; border: 1px solid \${scoreColor};">
+            \${statusText}
+          </div>
+        </div>
+
+        <div class="icc-hero-section">
+          <div class="icc-score-circle" style="border-color: \${scoreColor}; color: \${scoreColor};">
+            <div class="icc-score-val">\${cur.netScore}</div>
+            <div class="icc-score-lbl">CONFLUENCE</div>
+          </div>
+          <div class="icc-hero-info">
+            <div class="icc-hero-date">\${formatThaiDateLong(cur.date)} (\${cur.dayOfWeek})</div>
+            <div class="icc-hero-headline">"\${n.headline || 'จังหวะชีวิตดำเนินไปอย่างมั่นคง'}"</div>
+            <div class="icc-hero-summary">\${n.summary || ''}</div>
+          </div>
+        </div>
+
+        <div class="icc-pillars-grid">
+          <div class="icc-pillar-card">
+            <div class="icc-pillar-title">🧠 กายและจิตใจ (Mind & Body)</div>
+            <div class="icc-pillar-desc">\${n.emotion || '-'}</div>
+          </div>
+          <div class="icc-pillar-card">
+            <div class="icc-pillar-title">💼 หน้าที่การงาน (Career)</div>
+            <div class="icc-pillar-desc">\${n.career || '-'}</div>
+          </div>
+          <div class="icc-pillar-card">
+            <div class="icc-pillar-title">💰 การเงินและทรัพย์ (Wealth)</div>
+            <div class="icc-pillar-desc">\${n.finance || '-'}</div>
+          </div>
+          <div class="icc-pillar-card">
+            <div class="icc-pillar-title">♟️ ยุทธศาสตร์ & ปฏิบัติ (Action)</div>
+            <div class="icc-pillar-desc">\${n.action || '-'}</div>
+          </div>
+        </div>
+
+        <div class="icc-tactical-box">
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 6px;">
+            <div>
+              <span>🎨 <strong>สีทักษา:</strong></span>
+              <span>ศรี: <strong class="c-sri">\${t.sri || '-'}</strong></span> •
+              <span>เดช: <strong class="c-dech">\${t.dech || '-'}</strong></span> •
+              <span>มนตรี: <strong class="c-montri">\${t.montri || '-'}</strong></span> •
+              <span>กาลกิณี: <strong class="c-kala">\${t.kalakini || '-'}</strong></span>
+            </div>
+            <div>🇨🇳 <strong>ดวงจีน:</strong> \${cur.bazi.raw}</div>
+          </div>
+          <div>⚠️ <strong>ข้อควรระวัง:</strong> \${n.warning || 'ระวังความเหนื่อยล้าสะสม'}</div>
+          <div style="margin-top: 4px; font-size: 10.5px; opacity: 0.85;">🧭 <strong>ทิศมงคล Kua 4:</strong> ใต้ (บารมี) • เหนือ (ความคิด) • ตะวันออกเฉียงใต้ (มั่งคั่ง) • ตะวันออก (สุขภาพ)</div>
+        </div>
+
+        <div class="icc-footer-row">
+          <div>คุณครูพิชญุตม์ • ลัคนากรกฎ 12°44' • จอมฟ้าเมษ 8°37' • ดิถีไม้กะ</div>
+          <div style="font-family: var(--font-en);">✦ IAE Scientific Astrological Framework ✦</div>
+        </div>
+      \`;
+
+      setTimeout(() => {
+        if (typeof htmlToImage === 'undefined') {
+          alert('กำลังโหลดโมดูลรูปภาพ กรุณาลองใหม่อีกครั้ง');
+          if (quickBtn) quickBtn.innerHTML = originalText;
+          return;
+        }
+
+        htmlToImage.toPng(container, {
+          pixelRatio: 2,
+          cacheBust: true,
+          backgroundColor: theme === 'obsidian' ? '#06080F' : '#FFFFFF'
+        })
+        .then(dataUrl => {
+          const a = document.createElement('a');
+          a.download = \`IAE-Destiny-\${cur.date}.png\`;
+          a.href = dataUrl;
+          a.click();
+          if (quickBtn) {
+            quickBtn.innerHTML = '<span>✅</span> สำเร็จ!';
+            setTimeout(() => { quickBtn.innerHTML = originalText; }, 2000);
+          }
+        })
+        .catch(err => {
+          console.error('Image export failed:', err);
+          alert('เกิดข้อผิดพลาดในการสร้างรูปภาพ กรุณาลองใหม่อีกครั้ง');
+          if (quickBtn) quickBtn.innerHTML = originalText;
+        });
+      }, 150);
+    }
+
+    function export7DayImage(startIdx, themeOverride) {
+      const idx = (typeof startIdx === 'number') ? startIdx : activeIndex;
+      const theme = themeOverride || exportTheme || 'obsidian';
+      const actualStart = (idx + 7 <= data.length) ? idx : Math.max(0, data.length - 7);
+      const days = data.slice(actualStart, actualStart + 7);
+      const startDateStr = formatThaiDateLong(days[0].date);
+      const endDateStr = formatThaiDateLong(days[days.length - 1].date);
+      const avgScore = Math.round(days.reduce((acc, d) => acc + d.netScore, 0) / days.length);
+
+      const container = document.getElementById('image-capture-container');
+      container.className = \`image-capture-card theme-\${theme}\`;
+
+      let itemsHtml = '';
+      days.forEach(d => {
+        const n = d.narrative || {};
+        const t = d.taksa || {};
+        const scoreColor = d.netScore >= 70 ? '#10B981' : (d.netScore <= 45 ? '#F43F5E' : (theme === 'obsidian' ? '#E5B869' : '#B45309'));
+
+        itemsHtml += \`
+          <div style="background: \${theme === 'obsidian' ? '#0B101D' : '#F8FAFC'}; border: 1px solid \${theme === 'obsidian' ? 'rgba(229,184,105,0.2)' : '#CBD5E1'}; border-radius: 8px; padding: 8px 12px; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+            <div style="flex: 1.2;">
+              <div style="font-weight: 700; font-size: 12px; font-family: var(--font-en); color: \${scoreColor};">\${d.date} (\${d.dayOfWeek.slice(3)})</div>
+              <div style="font-size: 11.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px;">\${n.headline || '-'}</div>
+            </div>
+            <div style="flex: 2; font-size: 10.5px; opacity: 0.85; line-height: 1.35;">
+              <div>🎯 \${n.action || '-'}</div>
+              <div style="font-size: 9.5px; opacity: 0.75; margin-top: 2px;">🎨 ศรี:\${t.sri || '-'} | เดช:\${t.dech || '-'} | เลี่ยง:\${t.kalakini || '-'}</div>
+            </div>
+            <div style="text-align: right; min-width: 50px;">
+              <div style="font-size: 16px; font-weight: 800; font-family: var(--font-en); color: \${scoreColor};">\${d.netScore}</div>
+              <div style="font-size: 8.5px; opacity: 0.6;">SCORE</div>
+            </div>
+          </div>
+        \`;
+      });
+
+      container.innerHTML = \`
+        <div class="icc-header-row">
+          <div class="icc-brand-wrap">
+            <div class="icc-sigil">✧</div>
+            <div>
+              <div class="icc-brand-title">IAE IMPERIAL ASTROLOGICAL DOSSIER</div>
+              <div class="icc-sub-brand">แผนผังยุทธศาสตร์ชะตา 7 วัน • พิกัดดาราศาสตร์สากล VSOP87</div>
+            </div>
+          </div>
+          <div class="icc-badge" style="background: rgba(229, 184, 105, 0.2); color: #E5B869; border: 1px solid #E5B869;">
+            ⚡ 7-DAY STRATEGIC SHEET
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; background: \${theme === 'obsidian' ? 'rgba(229,184,105,0.08)' : '#FFFBEB'}; border: 1px solid \${theme === 'obsidian' ? 'rgba(229,184,105,0.25)' : '#FCD34D'}; border-radius: 8px; padding: 8px 14px; margin-bottom: 12px; font-size: 11.5px;">
+          <div>📅 <strong>ช่วงเวลา:</strong> \${startDateStr} – \${endDateStr}</div>
+          <div>📈 <strong>คะแนนเฉลี่ย:</strong> <span style="font-weight: 700; font-family: var(--font-en); font-size: 13px;">\${avgScore}/100</span></div>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          \${itemsHtml}
+        </div>
+
+        <div class="icc-footer-row">
+          <div>คุณครูพิชญุตม์ • ลัคนากรกฎ 12°44' • จอมฟ้าเมษ 8°37' • ดิถีไม้กะ • Kua 4</div>
+          <div style="font-family: var(--font-en);">✦ IAE Scientific Astrological Framework ✦</div>
+        </div>
+      \`;
+
+      setTimeout(() => {
+        if (typeof htmlToImage === 'undefined') {
+          alert('กำลังโหลดโมดูลรูปภาพ กรุณาลองใหม่อีกครั้ง');
+          return;
+        }
+
+        htmlToImage.toPng(container, {
+          pixelRatio: 2,
+          cacheBust: true,
+          backgroundColor: theme === 'obsidian' ? '#06080F' : '#FFFFFF'
+        })
+        .then(dataUrl => {
+          const a = document.createElement('a');
+          a.download = \`IAE-7Day-Strategy-\${days[0].date}.png\`;
+          a.href = dataUrl;
+          a.click();
+        })
+        .catch(err => {
+          console.error('7-Day image export failed:', err);
+          alert('เกิดข้อผิดพลาดในการสร้างรูปภาพ กรุณาลองใหม่อีกครั้ง');
+        });
+      }, 150);
     }
 
     function formatThaiDateLong(dateStr) {
